@@ -46,7 +46,10 @@ body {
   margin-bottom: 0px;
   padding-bottom: 0px;
   border-bottom: 0px;
+  background-color: rgba(255,255,255,0.9);
+  
 }
+
 .container.body{
   margin-left: 0;
   padding-left: 0;
@@ -67,20 +70,26 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  background-image: image('../images/jumbotron/jumbo1.jpg');
+  background: url("../images/jumbotron/jumbo5.jpg") no-repeat center center;
   background-size: cover;
+  border-radius: 0px;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 
   .btn {
+    background-color: #E0FFFF;
     font-size: 21px;
+    border-radius: 60px;
+    //border-color: #387497;
+    color: #387497;
+    border-color: rgba(0,0,0,0);
     padding: 14px 24px;
   }
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+  margin: 40px;
 
   p + h4 {
     margin-top: 28px;
@@ -89,10 +98,32 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  .navbar{
+    background-color: rgba(255,255,255,0.0);
+    // background-color: rgba(255,255,255,1.0);
+  }
+  
+  .nav.navbar-nav li a{
+    font-weight: bold;
+    color:#E0FFFF;
+  }
+  .nav.navbar-nav li a:hover{
+    background-color:#E0FFFF;
+    opacity: 0.8;
+  }
+  
+  .nav.navbar-nav .active a,
+  .nav.navbar-nav .active a:hover,
+  .nav.navbar-nav .active a:focus {
+    background-color: #E0FFFF;
+  }
+
+  
   .container {
     max-width: 1920px;
   }
-
+  
+  
   /* Remove the padding we set earlier */
   .header,
   .marketing,

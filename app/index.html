@@ -21,7 +21,7 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
+      <div class="navbar navbar-default" role="navigation" >
         <div class="container">
           <div class="navbar-header">
 
@@ -34,10 +34,10 @@
 
             <a class="navbar-brand" href="#!/">genIce</a>
           </div>
+          
+          <div class="collapse navbar-collapse " id="js-navbar-collapse"  ng-controller="HeaderCtrl">
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse"  ng-controller="HeaderCtrl">
-
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav ">
               <li ng-class="{ active: isActive('/')}"><a href="#!/">Home</a></li>
               <li ng-class="{ active: isActive('/about')}"><a ng-href="#!/about">About</a></li>
               <li ng-class="{ active: isActive('/store')}"><a ng-href="#!/store">Store</a></li>
@@ -49,6 +49,8 @@
         </div>
       </div>
     </div>
+    
+    
 
     <div class="container body">
     <div ng-view=""></div>
