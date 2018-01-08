@@ -20,6 +20,7 @@ body {
   padding-right: 0px;
 }
 
+.services,
 .marketing,
 .footer {
   padding-left: 15px;
@@ -57,6 +58,7 @@ body {
   margin-right: 0;
   width: 100%;
 }
+
 /* Custom page footer */
 .footer {
   padding-top: 19px;
@@ -78,22 +80,52 @@ body {
 
   .btn {
     background-color: #E0FFFF;
-    font-size: 21px;
+    font-size: 16px;
     border-radius: 60px;
     //border-color: #387497;
     color: #387497;
     border-color: rgba(0,0,0,0);
     padding: 14px 24px;
+    transition-duration: 0.4s;
+  }
+    .btn:hover {
+    background-color: #387497;
+    color: #E0FFFF;
   }
 }
 
+.service-glyphicon{
+  color: #387497;
+  font-size: 30px;
+  margin: 15p;
+}
+
 /* Supporting marketing content */
+.services{
+  margin:0 40px 30px 40px;
+  
+}
 .marketing {
   margin: 40px;
 
   p + h4 {
     margin-top: 28px;
   }
+}
+
+.panel{
+/*  border: 0;
+  box-shadow: none;*/
+  width: 300px;
+  margin:1px;
+  word-wrap: break-word;
+}
+.service-div{
+  width: auto;
+}
+
+.panel-title{
+  font-size: 21px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -103,9 +135,16 @@ body {
     // background-color: rgba(255,255,255,1.0);
   }
   
+  .service-glyphicon{
+    color: #387497;
+    font-size: 50px;
+    margin: 15p;
+  }
+  
   .nav.navbar-nav li a{
     font-weight: bold;
     color:#E0FFFF;
+    transition-duration: 0.3s;
   }
   .nav.navbar-nav li a:hover{
     background-color:#E0FFFF;
@@ -118,9 +157,17 @@ body {
     background-color: #E0FFFF;
   }
 
+  .service-title
+  {
+    margin-bottom: 30px;
+  }
+  
   
   .container {
     max-width: 1920px;
+  }
+  .container.service-container{
+    width: 400px;
   }
   
   
@@ -146,4 +193,5 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+  
 }

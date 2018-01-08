@@ -8,12 +8,13 @@
  * Controller of the genIceApp
  */
 angular.module('genIceApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+   $scope.users = ['Fabio', 'Leonardo', 'Thomas', 'Gabriele', 'Fabrizio', 'John', 'Luis', 'Kate', 'Max'];
   })
  .controller('HeaderCtrl', function ($scope, $location) { 
     $scope.isActive = function (viewLocation) { 
