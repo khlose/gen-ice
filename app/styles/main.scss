@@ -116,13 +116,17 @@ body {
   margin:1px;
   word-wrap: break-word;
 }
+
 .service-div{
   width: auto;
 }
 
-.panel-title{
-  font-size: 21px;
-}
+/*.row.service-panels{
+  float: none;
+  margin:auto;
+}*/
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -197,6 +201,11 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+  
+  .row.service-panels{
+    float: none;
+    margin:auto;
   }
   
 }
