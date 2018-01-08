@@ -112,7 +112,7 @@ body {
 .panel{
 /*  border: 0;
   box-shadow: none;*/
-  width: 300px;
+  width: 400px;
   margin:1px;
   word-wrap: break-word;
 }
@@ -202,6 +202,16 @@ body {
     border-bottom: 0;
   }
 
+
+  #center{
+    width: auto;
+    margin: auto;
+  }
+  .tiles{
+    float: none;
+    width: inherit;
+    margin: auto;
+  }
   .row.service-panels{
     float: none;
     margin:auto;
