@@ -20,12 +20,12 @@ body {
   padding-right: 0px;
 }
 
-.services,
 .marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 
 /* Custom page header */
 .header {
@@ -100,11 +100,7 @@ body {
   margin: 15p;
 }
 
-/* Supporting marketing content */
-.services{
-  margin:0 40px 30px 40px;
-  
-}
+
 .marketing {
   margin: 40px;
 
@@ -183,6 +179,15 @@ body {
     
     margin: 0px;
     border: 0px;
+  }
+  /* Supporting marketing content */
+  .services{
+    margin:0 40px 30px 40px;
+
+  }
+  .container.service-container{
+    width: inherit;
+    word-wrap: break-word;
   }
   .navbar{
     margin-left: 0px;
