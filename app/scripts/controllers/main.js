@@ -21,3 +21,4 @@ angular.module('genIceApp')
       return viewLocation === $location.path();
     };
   });
+

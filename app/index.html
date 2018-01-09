@@ -8,11 +8,23 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/fontello.css">
+
+    <link href="styles/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="styles/icheck.min_all.css">
+    <link rel="stylesheet" href="styles/price-range.css">
+    <link rel="stylesheet" href="styles/owl.carousel.css">  
+    <link rel="stylesheet" href="styles/owl.theme.css">
+    <link rel="stylesheet" href="styles/owl.transitions.css">
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body ng-app="genIceApp">
     <!--[if lte IE 8]>
@@ -20,46 +32,128 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+
+
+<!--    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>-->
+    <!-- Body content -->
     <div class="header">
+      
+      
       <div class="navbar navbar-default" role="navigation" >
         <div class="container">
+          
+          
           <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-
-            <a class="navbar-brand" href="#!/">genIce</a>
+            
           </div>
           
-          <div class="collapse navbar-collapse " id="js-navbar-collapse"  ng-controller="HeaderCtrl">
-
-            <ul class="nav navbar-nav ">
-              <li ng-class="{ active: isActive('/')}"><a href="#!/">Home</a></li>
-              <li ng-class="{ active: isActive('/about')}"><a ng-href="#!/about">About</a></li>
-              <li ng-class="{ active: isActive('/store')}"><a ng-href="#!/store">Store</a></li>
-              <li ng-class="{ active: isActive('/cart')}"><a ng-href="#!/cart">Cart</a></li>
-              <li><a ng-href="#!/">Contact</a></li>
-            </ul>
-          </div>
           
+          <div class="collapse navbar-collapse yamm" id="navigation">
+            <div class="button navbar-right">
+              <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register.html')" data-wow-delay="0.45s">Login</button>
+            </div>
+            <ul class="main-nav nav navbar-nav navbar-right">
+              <li class="wow fadeInDown" data-wow-delay="0.1s" ng-class="{ active: isActive('/')}"><a href="#!/" class="active">Home</a></li>
+
+                        <li class="wow fadeInDown" data-wow-delay="0.2s" ><a class="" ng-href="#!/store">Store</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.3s"><a class="" ng-href="#!/about">About</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="" ng-href="#!/cartt">Cart</a></li>
+                       
+                        <li class="wow fadeInDown" data-wow-delay="0.5s"><a ng-href="#!/">Contact</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+          
+
         </div>
       </div>
+
+      
+      
     </div>
-    
-    
+
+
 
     <div class="container body">
     <div ng-view=""></div>
     </div>
 
     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
+        <div class="footer-area">
+
+            <div class=" footer">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                            <div class="single-footer">
+                                <h4>About us </h4>
+                                <div class="footer-title-line"></div>
+
+                                <img src="assets/img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
+                                <p>Lorem ipsum dolor cum necessitatibus su quisquam molestias. Vel unde, blanditiis.</p>
+                                <ul class="footer-adress">
+                                    <li><i class="fa fa-twitter"></i> 9089 your adress her</li>
+                                    <li><i class="fa fa-envelope-o"> </i> email@yourcompany.com</li>
+                                    <li><i class="fa fa-phone"> </i> +1 908 967 5906</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                            <div class="single-footer">
+                                <h4>Quick links </h4>
+                                <div class="footer-title-line"></div>
+                                <ul class="footer-menu">
+                                    <li><a href="properties.html">Properties</a>  </li> 
+                                    <li><a href="#">Services</a>  </li> 
+                                    <li><a href="submit-property.html">Submit property </a></li> 
+                                    <li><a href="contact.html">Contact us</a></li> 
+                                    <li><a href="faq.html">fqa</a>  </li> 
+                                    <li><a href="faq.html">Terms </a>  </li> 
+                                </ul>
+                            </div>
+                        </div>
+                      
+
+                        <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                            <div class="single-footer news-letter">
+                                <h4>Stay in touch</h4>
+                                <div class="footer-title-line"></div>
+                                <p>Lorem ipsum dolor sit amet, nulla  suscipit similique quisquam molestias. Vel unde, blanditiis.</p>
+
+                                <form>
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" placeholder="E-mail ... ">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
+                                        </span>
+                                    </div>
+                                    <!-- /input-group -->
+                                </form> 
+
+                                <div class="social pull-right"> 
+                                    <ul>
+                                        <li><a class="wow fadeInUp animated" href="https://twitter.com/kimarotec"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://www.facebook.com/kimarotec" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://plus.google.com/kimarotec" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a class="wow fadeInUp animated" href="https://instagram.com/kimarotec" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+          </div>
+        </div>
     </div>
 
 
@@ -100,5 +194,15 @@
         <script src="scripts/controllers/category.js"></script>
         <script src="scripts/controllers/cart.js"></script>
         <!-- endbuild -->
+     <script src="scripts/assets/wow.js"></script>
+    <script src="scripts/assets/modernizr-2.6.2.min.js"></script>
+    
+    <script src="scripts/assets/jquery-1.10.2.min.js"></script> 
+    <script src="scripts/assets/main.js"></script> 
+    <script src="scripts/assets/icheck.min.js"></script> 
+    <script src="scripts/assets/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="scripts/assets/lightslider.min.js"></script>
+    <script src="scripts/assets/icheck.min.js"></script>
+    <script src="scripts/assets/price-range.js"></script>
 </body>
 </html>

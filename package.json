@@ -42,6 +42,7 @@
     "test": "karma start test/karma.conf.js"
   },
   "dependencies": {
-    "@moltin/sdk": "^3.1.0"
+    "@moltin/sdk": "^3.1.0",
+    "font-awesome": "^4.7.0"
   }
 }
