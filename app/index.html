@@ -38,6 +38,9 @@
       <div id="status">&nbsp;</div>
     </div>-->
     <!-- Body content -->
+    <div id="preloader">
+            <div id="status">&nbsp;</div>
+    </div>
     <div class="header">
       
       
@@ -56,20 +59,19 @@
           </div>
           
           
-          <div class="collapse navbar-collapse yamm" id="navigation">
+          <div class="collapse navbar-collapse yamm" id="navigation" ng-controller="HeaderCtrl">
             <div class="button navbar-right">
               <button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register.html')" data-wow-delay="0.45s">Login</button>
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
-              <li class="wow fadeInDown" data-wow-delay="0.1s" ng-class="{ active: isActive('/')}"><a href="#!/" class="active">Home</a></li>
-
-                        <li class="wow fadeInDown" data-wow-delay="0.2s" ><a class="" ng-href="#!/store">Store</a></li>
-                        <li class="wow fadeInDown" data-wow-delay="0.3s"><a class="" ng-href="#!/about">About</a></li>
-                        <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="" ng-href="#!/cartt">Cart</a></li>
-                       
-                        <li class="wow fadeInDown" data-wow-delay="0.5s"><a ng-href="#!/">Contact</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
+              <li class="wow fadeInDown" data-wow-delay="0.1s"><a ng-href="#!/" class="ng-class:{ 'active': isActive('/')}">Home</a></li>
+              <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="ng-class:{ 'active': isActive('/store')}" ng-href="#!/store">Store</a></li>
+              <li class="wow fadeInDown" data-wow-delay="0.3s"><a ng-href="#!/contact">Contact</a></li>
+              <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="ng-class:{ 'active': isActive('/cart')}" ng-href="#!/cart">Cart</a></li>
+              
+              
+            </ul>
+          </div><!-- /.navbar-collapse -->
           
 
         </div>
@@ -193,6 +195,7 @@
         <script src="scripts/controllers/store.js"></script>
         <script src="scripts/controllers/category.js"></script>
         <script src="scripts/controllers/cart.js"></script>
+        <script src="scripts/controllers/contact.js"></script>
         <!-- endbuild -->
      <script src="scripts/assets/wow.js"></script>
     <script src="scripts/assets/modernizr-2.6.2.min.js"></script>

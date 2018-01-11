@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name genIceApp.controller:AboutCtrl
+ * @name genIceApp.controller:ContactCtrl
  * @description
- * # AboutCtrl
+ * # ContactCtrl
  * Controller of the genIceApp
  */
 angular.module('genIceApp')
-  .controller('AboutCtrl', function () {
+  .controller('ContactCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
