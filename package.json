@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "grunt-karma": "^2.0.0",
     "owl.carousel": "^2.2.0"
   }
 }
