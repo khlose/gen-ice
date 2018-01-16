@@ -20,5 +20,10 @@ angular.module('genIceApp')
     $scope.isActive = function (viewLocation) { 
       return viewLocation === $location.path();
     };
+  })
+ .controller('swiperCtrl', function ($scope, $location) { 
+    $scope.isActive = function (viewLocation) { 
+      return viewLocation === $location.path();
+    };
   });
 

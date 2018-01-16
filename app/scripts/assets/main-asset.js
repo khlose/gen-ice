@@ -32,7 +32,7 @@ $(document).ready(function () {
     });
   
   var swiper = new Swiper('.swiper-container', {
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
     pagination: {
       el: '.swiper-pagination',

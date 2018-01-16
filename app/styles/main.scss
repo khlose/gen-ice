@@ -35,7 +35,19 @@ html, body {
     }
 
 
-
+    .map-responsive {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .map-responsive iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
 
 
 
@@ -744,8 +756,10 @@ label small{
     padding-left: 20px;
 }
 
-.navbar-default .navbar-nav > li > a.active:after{
 
+@media (min-width: 767px)
+{
+  .navbar-default .navbar-nav > li > a.active:after{
     background-color: #326A88;
     bottom: -24px;
     content: "";
@@ -754,7 +768,50 @@ label small{
     position: absolute;
     transition: all 0.2s ease 0s;
     width: 100%;
+  }
 }
+
+
+@media (min-width: 0px) and (max-width: 766px)
+{
+  .navbar-default .navbar-nav > li > a.active:after{
+    background-color: rgba(255,255,255,0);
+    bottom: -24px;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    transition: all 0.2s ease 0s;
+    width: 100%;
+  }
+}
+
+
+.phone-mail{
+  margin:0px;
+  width: auto;
+}
+ul.list-inline{
+  margin: 0px;
+  width: auto;
+  padding: 0px 0px 15px 0px;
+}
+
+@media (min-width: 0px) and (max-width: 766px)
+{
+  .phone-mail{
+    font-size: 12px;
+    text-align: center;
+  }
+  ul.list-inline{
+    font-size: 12px;
+    text-align: center;
+  }
+  
+}
+
+
+
 .navbar-default .navbar-nav > li > a::after {
     background-color: #326A88;
     bottom: -24px;
@@ -772,9 +829,14 @@ label small{
 .navbar-nav.navbar-right:last-child{
     margin-right: 20px
 }
-.navbar-brand {
-
+@media (min-width: 0px) and (max-width: 766px)
+{
+  .navbar-brand {
+  padding: 0px 15px 0px 15px;
 }
+}
+
+
 .main-nav {
     padding-top: 10px;
 }
@@ -1044,10 +1106,51 @@ label small{
     margin-left: 0;
 }
 
+@media (min-width: 767px)
+{
+
 .slider-area{
-    position: relative;
-    height: 630px
+  position: relative;
+  height: 630px;
+  //margin-bottom: 5%;
+  }
 }
+
+
+@media (max-width: 766px)
+{
+
+.slider-area{
+  position: relative;
+  height: auto;
+  //margin-bottom: 5%;
+  }
+}
+
+.feature {
+	padding:50px;
+}
+
+.hi-icon-effect i.fa:hover {
+	background:#fff;
+	color: #346B8B;
+	-webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
+
+
+.text-center i.feature-fa{
+	font-size:40px;
+	margin-top:70px;
+	margin-bottom:30px;
+	color:#fff;
+	padding:50px;
+	background:#346B8B;
+	border-radius:50%;
+}
+
 #bg-slider .item img{
     width: 100%;
     height: 630px
@@ -1126,7 +1229,7 @@ font-weight: 500;
 page-header
 ======================================================*/
 .page-head{
-    background: #324753 url("../../assets/img/page-header.jpg") 
+    background: #324753 url("../images/page-header.jpg") 
         no-repeat scroll center top / cover;
     color:#FFF;
     position: relative;
@@ -1673,57 +1776,6 @@ padding: 0 0 0.5em;
 .left {
     text-align: left;
 }
-.garo-icon-dog-gry{
-    
-}
-.garo-icon-dog-gry::after{
-    
-}
-.garo-icon-car-gry{
-    
-}
-.garo-icon-car-gry::after{
-    
-}
-.garo-icon-area-gry{
-    
-}
-.garo-icon-area-gry::after{
-    
-}
-.garo-icon-sw-gry{
-    
-}
-.garo-icon-sw-gry::after{
-    
-}
-.garo-icon-shw-gry{
-    
-}
-.garo-icon-shw-gry::after{
-    
-}
-
-.garo-icon-wf-gry{
-    
-}
-.garo-icon-wf-gry::after{
-    
-}
-
-.garo-icon-bed-gry{
-    
-}
-.garo-icon-bed-gry::after{
-    
-}
-
-.garo-icon-zzz-gry{
-    
-}
-.garo-icon-zzz-gry::after{
-    
-}
 
 /*=====================================
 proerty-th 
@@ -1770,7 +1822,7 @@ proerty-th
     position: relative;
 }
 .proerty-th .proerty-item  .item-entry h5::after {
-    background: transparent url("../images/chevron-down.png") no-repeat scroll center center;
+
     width: 15px;
     left: 20px;
     height: 7px;
@@ -2262,8 +2314,9 @@ single property page
 Welcom 
 ======================================*/
 .Welcome-area{
-    background: #EBF0F3 url("../images/welcome-bg.png") no-repeat scroll left top;
-    position: relative;
+    //background: #EBF0F3 url("../images/welcome-bg.png") no-repeat scroll left top;
+    background: rgba(221,223,228,0.5);
+  position: relative;
   width: auto;
 
 
@@ -2851,7 +2904,7 @@ background: rgba(255, 255, 255, 0.9) none repeat scroll 0% 0%;
     color: #000;
 } 
 .footer-copy{
-    background: rgba(221,223,228, 0.6) none repeat scroll 0% 0%;
+    background: rgba(221,223,228,0.5) none repeat scroll 0% 0%;
     border-top: 0.051px solid rgba(162, 162, 162, 0.46);
     padding-bottom: 0px;
     padding-bottom: 7px;
