@@ -8,8 +8,19 @@
  *
  * Main module of the application.
  */
+var config = {
+    apiKey: "AIzaSyAnDVJNrjdoZHgqKzKMsUm1DizldJ1QNaA",
+    authDomain: "hok-thailand.firebaseapp.com",
+    databaseURL: "https://hok-thailand.firebaseio.com",
+    projectId: "hok-thailand",
+    storageBucket: "hok-thailand.appspot.com",
+    messagingSenderId: "600647387700"
+  };
+  firebase.initializeApp(config);
+ 
 angular
   .module('genIceApp', [
+    'firebase',
     'ngAnimate',
     'ngCookies',
     'ngResource',
