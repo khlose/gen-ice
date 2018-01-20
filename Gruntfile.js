@@ -204,7 +204,8 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/index.html'],
         ignorePath:  /\.\.\//
       },
-      test: {
+      
+/*      test: {
         devDependencies: true,
         src: '<%= karma.unit.configFile %>',
         ignorePath:  /\.\.\//,
@@ -219,7 +220,7 @@ module.exports = function (grunt) {
               }
             }
           }
-      },
+      },*/
       sass: {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
@@ -454,15 +455,15 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
-    },
+    }
 
     // Test settings
-    karma: {
+/*    karma: {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    }*/
   });
 
 
