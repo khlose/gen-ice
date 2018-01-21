@@ -1,6 +1,4 @@
-<pre>
-{{main.products | json}}
-</pre>
+
 
 <div class="Welcome-area">
 
@@ -51,6 +49,7 @@
         <div class="content-area home-area-1 recent-property" style="background-color: #FCFCFC; padding-bottom: 55px;">
             <div class="container">
                 <div class="row">
+                    
                     <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                         <!-- /.feature title -->
                         <h2>Top products</h2>
@@ -58,106 +57,25 @@
                     </div>
                 </div>
 
-                <div class="row">
+              
+              
+        
+              
+              <div class="row">
                     <div class="proerty-th">
-                        <div class="col-sm-6 col-md-3 p0">
+                        <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in main.products">
                             <div class="box-two proerty-item">
                                 <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
+                                    <a href="" ><img src="{{value.imageurl}}"></a>
                                 </div>
                                 <div class="item-entry overflow">
                                     <h5><a href="" >place holder</a></h5>
                                     <div class="dot-hr"></div>  
-                                    <span class="proerty-price pull-right">$ 300,000</span>
+                                    <span class="proerty-price pull-right">{{value.price}}</span>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="" >place holder</a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="" >place holder</a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="" >place holder</a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="" >place holder</a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="" >place holder</a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
-                            <div class="box-two proerty-item">
-                                <div class="item-thumb">
-                                    <a href="" ><img src="../images/snooker-1.jpg"></a>
-
-                                </div>
-                                <div class="item-entry overflow">
-                                    <h5><a href="" >place holder</a></h5>
-                                    <div class="dot-hr"></div>
-                                    <span class="proerty-price pull-right">$ 300,000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3 p0">
+                                   <div class="col-sm-6 col-md-3 p0">
                             <div class="box-tree more-proerty text-center">
                                 <div class="item-tree-icon">
                                   <i class="fa fa-th"></i>
@@ -169,9 +87,15 @@
                                 </div>
                             </div>
                         </div>
+            
 
 
                     </div>
-                </div>
+              </div>
+              
+              
+              
+              
+              
             </div>
         </div>
