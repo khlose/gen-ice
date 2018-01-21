@@ -8,10 +8,8 @@
  * Controller of the genIceApp
  */
 angular.module('genIceApp')
-  .controller('StoreCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('StoreCtrl', function ($firebaseObject) {
+    const rootRef = firebase.database().ref().child('products');
+    const ref = rootRef.child('icemaker');
+    this.products = $firebaseObject(ref);
   });
