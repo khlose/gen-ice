@@ -72,7 +72,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" ng-href="#!/"><img src="images/logo-small.jpg" alt=""></a>
+            <a class="navbar-brand" ng-href="#!/"><img src="images/logo-small.png" alt=""></a>
             
           </div>
           
@@ -84,8 +84,17 @@
             </div>
             <ul class="main-nav nav navbar-nav navbar-right">
               <li class="wow fadeInDown" data-wow-delay="0.1s"><a ng-href="#!/" class="ng-class:{ 'active': isActive('/')}" data-toggle="collapse" data-target=".navbar-collapse">Home</a></li>
-              <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="ng-class:{ 'active': isActive('/store')}" ng-href="#!/store" data-toggle="collapse" data-target=".navbar-collapse">Store</a></li>
-              <li class="wow fadeInDown" data-wow-delay="0.3s"><a class="ng-class:{ 'active': isActive('/contact')}" ng-href="#!/contact" data-toggle="collapse" data-target=".navbar-collapse">Contact</a></li>
+              
+              <li class="wow fadeInDown" data-wow-delay="0.2s"><a class="ng-class:{ 'active': isActive('/why')}" ng-href="#!/why" data-toggle="collapse" data-target=".navbar-collapse">Why Gen Ice</a></li>
+              
+              
+                     <li class="wow fadeInDown" data-wow-delay="0.3s"><a class="ng-class:{ 'active': isActive('/store')}" ng-href="#!/store" data-toggle="collapse" data-target=".navbar-collapse">Store</a></li>
+              
+              <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="ng-class:{ 'active': isActive('/joinus')}" ng-href="#!/joinus" data-toggle="collapse" data-target=".navbar-collapse">Join Us</a></li>
+              
+       
+              
+              <li class="wow fadeInDown" data-wow-delay="0.5s"><a class="ng-class:{ 'active': isActive('/contact')}" ng-href="#!/contact" data-toggle="collapse" data-target=".navbar-collapse">Contact</a></li>
 <!--              <li class="wow fadeInDown" data-wow-delay="0.4s"><a class="ng-class:{ 'active': isActive('/cart')}" ng-href="#!/cart" data-toggle="collapse" data-target=".navbar-collapse">Cart</a></li>-->
               
               
@@ -101,10 +110,13 @@
       <div class="swiper-slide">
         <img src="images/slider-image-1.jpg" alt="GTA V">
       </div>
+                        <div class="swiper-slide">
+      <img src="images/slider-image-7.jpg" alt="GTA V"></div>
       <div class="swiper-slide">
       <img src="images/slider-image-2.jpg" alt="GTA V"></div>
       <div class="swiper-slide">
       <img src="images/slider-image-4.jpg" alt="GTA V"></div>
+
     </div>
   
   <!-- Add Pagination -->
@@ -223,6 +235,8 @@
         <script src="scripts/controllers/store.js"></script>
         <script src="scripts/controllers/cart.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/why.js"></script>
+        <script src="scripts/controllers/joinus.js"></script>
         <!-- endbuild -->
     <script
 			  src="https://code.jquery.com/jquery-1.12.4.min.js"

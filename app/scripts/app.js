@@ -60,6 +60,16 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
+      .when('/why', {
+        templateUrl: 'views/why.html',
+        controller: 'WhyCtrl',
+        controllerAs: 'why'
+      })
+      .when('/joinus', {
+        templateUrl: 'views/joinus.html',
+        controller: 'JoinusCtrl',
+        controllerAs: 'joinus'
+      })
       .otherwise({
         redirectTo: '/'
       });
