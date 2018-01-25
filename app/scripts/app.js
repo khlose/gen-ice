@@ -70,6 +70,11 @@ angular
         controller: 'JoinusCtrl',
         controllerAs: 'joinus'
       })
+      .when('/product/:sku', {
+        templateUrl: 'views/product.html',
+        controller: 'ProductCtrl',
+        controllerAs: 'product'
+      })
       .otherwise({
         redirectTo: '/'
       });

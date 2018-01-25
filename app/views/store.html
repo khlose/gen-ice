@@ -29,11 +29,11 @@
                           <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in store.products">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="" ><img src="{{value.imageurl}}"></a>
+                                            <a ng-href="#!/product/{{value.model}}" ><img src="{{value.imageurl}}"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href=""> {{value.model}} </a></h5>
+                                            <h5><a href="#"> {{value.model}} </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="proerty-price pull-right">{{value.price}}</span>
                                             <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
