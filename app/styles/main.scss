@@ -824,7 +824,14 @@ label small{
     transition: all 0.2s ease 0s;
     width: 100%;
   }
+  
+  .pull-right-lg {
+    float: right;
+    width: auto;
+  }
 }
+
+
 
 
 @media (min-width: 0px) and (max-width: 766px)
@@ -2160,7 +2167,7 @@ single property page
     letter-spacing: 3px;
 }
 .single-property-header .property-price{
-    color: #FFA500;
+    color: #326A88;
     font-size: 30px;
     letter-spacing: 1.5px;
     right: 0px;
@@ -2172,7 +2179,7 @@ single property page
 }
 .s-property-title {
     margin-bottom: 15px;
-    color: #FFA500;
+    color: #326A88;
     font-size: 18px;
 }
 
