@@ -52,6 +52,8 @@ html, body {
 
 
 
+
+
 /* --- services --- */
 .services {
 	padding:50px;
@@ -845,6 +847,11 @@ label small{
     position: absolute;
     transition: all 0.2s ease 0s;
     width: 100%;
+  }
+  
+    .pull-left-sm {
+    float: left;
+    width: auto;
   }
 }
 
@@ -2154,7 +2161,7 @@ single property page
     margin-top: -35px;
 }
 .single-property-header {
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     position: relative;
     clear: both;
     overflow: hidden;
@@ -2252,6 +2259,7 @@ single property page
 .dealer-name{
     margin-top: 6px;
     margin-bottom: 5px;
+    font-family: 'Helvetica';
 }
 .dealer-name a {
     color: #626262;
@@ -3198,4 +3206,56 @@ padding: 10px;
 }
 #map {
     height: 300px;
+}
+
+.add2cart{
+  
+    overflow: hidden;
+    position: relative;
+    line-height: 48px;
+    height: 48px;
+  width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  border-color: rgba(0,0,0,0);
+    span{
+        display: block;
+        height: 48px;
+        @include transition(all 0.2s ease-out);
+    }
+    span:first-child{
+        .glyphicon{
+            margin-left: 5px;
+        }
+    }
+    span:last-child{
+        opacity: 0;
+        .glyphicon{
+            margin-right: 5px;
+        }
+    }
+}
+
+.add2cart:hover{
+  color: white;
+  background: #326A88;
+  border-color: rgba(0,0,0,0);
+}
+.add2cart.success{
+    color: #fff;
+    background-color: #8BCFE8;
+    border-color: rgba(0,0,0,0);
+  width: auto;
+    span:first-child{
+        margin-top: -48px;
+      
+        opacity: 0;
+    }
+    span:last-child{
+        opacity: 1;
+      margin-left: 8px;
+    }
+}
+.cart-doc-div{
+  margin-bottom: 15px;
 }
