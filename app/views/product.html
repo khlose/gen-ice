@@ -1,11 +1,3 @@
-<p>This is the product view.</p>
-
-<pre>
-{{product.currentProduct | json}}
-</pre>
-
-
-
    <div class="page-head"> 
             <div class="container">
                 <div class="row">
@@ -37,17 +29,8 @@
 
                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                         <li data-thumb="assets/img/property-1/property1.jpg"> 
-                                            <img src="assets/img/property-1/property1.jpg" />
-                                        </li>
-                                        <li data-thumb="img/property-1/property2.jpg"> 
-                                            <img src="assets/img/property-1/property3.jpg" />
-                                        </li>
-                                        <li data-thumb="assets/img/property-1/property3.jpg"> 
-                                            <img src="assets/img/property-1/property3.jpg" />
-                                        </li>
-                                        <li data-thumb="assets/img/property-1/property4.jpg"> 
-                                            <img src="assets/img/property-1/property4.jpg" />
-                                        </li>                                         
+                                            <img src="{{currentProduct.imageurl}}" />
+                                        </li>                                       
                                     </ul>
                                 </div>
                             </div>
@@ -133,7 +116,7 @@
                             </div>
                             <!-- End description area  -->
 
-                            <div class="section additional-details">
+<!--                            <div class="section additional-details">
 
                                 <h4 class="s-property-title">Additional Details</h4>
 
@@ -162,13 +145,9 @@
                                         <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Intracoastal View,Direct ew</span>
                                     </li>
 
-                                    <li>
-                                        <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Waterfront Description:</span>
-                                        <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Intracoastal Front,Ocean Access</span>
-                                    </li> 
 
                                 </ul>
-                            </div>  
+                            </div>  -->
 
 
                         </div>
