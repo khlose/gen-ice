@@ -3180,15 +3180,20 @@ padding: 10px;
 }
 /* Preloader */
 
-#preloader {
+/*#preloader {
     position:fixed;
     top:0;
     left:0;
     right:0;
     bottom:0;
-    background-color:#fff; /* change if the mask should have another color then white */
-    z-index:99; /* makes sure it stays on top */
+    background-color:#fff;
+    z-index:99;
+}*/
+.preloader{
+  background: url('../images/Preloader_cube.gif') no-repeat 50% 50% transparent;
+  
 }
+
 
 #status {
     width:200px;
