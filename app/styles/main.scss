@@ -8,6 +8,14 @@ html, body {
     overflow-x: hidden;
 }
 
+.fade-out.ng-hide {
+  opacity: 0;
+}
+
+.fade-out.ng-hide-add, .fade-out.ng-hide-remove {
+  transition: all linear 0.2s;
+}
+
 
 
 
@@ -3180,24 +3188,27 @@ padding: 10px;
 }
 /* Preloader */
 
-/*#preloader {
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background-color:#fff;
-    z-index:99;
-}*/
 .preloader{
-      position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
   z-index:99;
-  background: url('../images/Preloader_cube.gif') no-repeat 50% 50% transparent;
+  background-color: white;
+  background: url('../images/Preloader_cube.gif') no-repeat 50% 50%;
   
+}
+
+.preloader-bg{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:95;
+  background-color: white;
+ 
 }
 
 
