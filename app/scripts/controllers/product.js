@@ -21,11 +21,21 @@ angular.module('genIceApp')
   $scope.added = false;
   $scope.add = function(product){
     //if(cart.$add(product, 1)){
-    if(true){  
+    if(false){  
       $scope.added = true;
       $timeout(function(){
         $scope.added = false;
       },2000); // Amount of time to show added to cart success message
+    }
+    else{
+      
+      
+      swal({
+        type: 'error',
+        title: 'สินค้าหมด',
+        text: 'กรุณาสั่งซื้อผ่านทางอีเมล์',
+        footer: '<a href="#!/contact">ไปที่หน้าอีเมล์</a>',
+      });
     }
   };
   console.log(prod);
