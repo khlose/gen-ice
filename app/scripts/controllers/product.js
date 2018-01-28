@@ -30,12 +30,14 @@ angular.module('genIceApp')
     else{
       
       
-      swal({
-        type: 'error',
-        title: 'สินค้าหมด',
-        text: 'กรุณาสั่งซื้อผ่านทางอีเมล์',
-        footer: '<a href="#!/contact">ไปที่หน้าอีเมล์</a>',
-      });
+      swal({ 
+  title: "สินค้าหมด",
+   text: "กรุณาสั่งซื้อผ่านทางอีเมล์",
+    type: "error",
+    confirmButtonText: "ไปที่หน้าอีเมล์"
+  }).then(function() {
+        window.location.href = "#!/contact";
+      });;
     }
   };
   console.log(prod);
