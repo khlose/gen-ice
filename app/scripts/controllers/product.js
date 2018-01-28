@@ -11,9 +11,10 @@ angular.module('genIceApp')
   .controller('ProductCtrl', function ($scope,$routeParams,$firebaseObject,$timeout) {
   const ref = firebase.database().ref().child('products').child('icemaker');
   var prod = $firebaseObject(ref.orderByChild('model').equalTo($routeParams.sku).limitToFirst(1));
-  
+  $scope.dataLoaded = false;
   prod.$loaded().then(function(){
     $scope.currentProduct = prod[$routeParams.sku];
+    $scope.dataLoaded = true;
   });
   
   
@@ -26,7 +27,7 @@ angular.module('genIceApp')
         $scope.added = false;
       },2000); // Amount of time to show added to cart success message
     }
-    
   };
+  console.log(prod);
   
   });

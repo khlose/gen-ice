@@ -14,11 +14,26 @@ angular.module('genIceApp')
       'AngularJS',
       'Karma'
     ];
+  $scope.dataLoaded = false;
    $scope.users = ['Fabio', 'Leonardo', 'Thomas', 'Gabriele', 'Fabrizio', 'John', 'Luis', 'Kate', 'Max'];
     const rootRef = firebase.database().ref().child('products');
     const ref = rootRef.child('icemaker');
     const showcase = ref.orderByChild('showcase').equalTo(true);
-    this.products = $firebaseObject(showcase);
+    var prod = $firebaseObject(showcase);
+    
+    prod.$loaded().then(function(){
+      $scope.products = prod;
+      $scope.dataLoaded = true;
+      console.log($scope.dataLoaded);
+  });
+    
+  
+  
+/*
+  $scope.dataLoaded = !this.products.$resolved;
+  console.log($scope.dataLoaded);
+  console.log(this.products);
+*/
 
   })
  .controller('HeaderCtrl', function ($scope, $location) { 
