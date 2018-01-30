@@ -28,7 +28,7 @@
                                     </div> 
 
                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                        <li data-thumb="assets/img/property-1/property1.jpg"> 
+                                        <li> 
                                             <img src="{{currentProduct.imageurl}}" />
                                         </li>                                       
                                     </ul>
@@ -201,25 +201,33 @@
                                 <div class="panel-heading">
                                     <h3 class="panel-title">สินค้าลักษณะเดียวกัน</h3>
                                 </div>
+                              
                                 <div class="panel-body recent-property-widget">
                                     <ul>
-                                        <li>
+                                        <li  ng-repeat="(key, value) in relatedProduct">
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="assets/img/demo/small-property-2.jpg"></a>
+                                                <a href="single.html"><img src="{{value.imageurl}}"></a>
                                                 <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
                                                 </span>
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
-                                                <h6> <a href="single.html">GI-1234A</a></h6>
-                                                <span class="property-price">3000000$</span>
+                                                <h6> <a href="single.html" class="property-price">{{value.model}}</a></h6>
+                                                <span class="property-price">฿{{value.price}}</span>
+                                              <hr>
                                             </div>
+                                          
                                         </li>
                                        
 
                                     </ul>
                                 </div>
+                              
+                              
+                              
+                              
+                              
                             </div>
 
 

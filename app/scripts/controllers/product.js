@@ -14,7 +14,29 @@ angular.module('genIceApp')
   $scope.dataLoaded = false;
   prod.$loaded().then(function(){
     $scope.currentProduct = prod[$routeParams.sku];
-    $scope.dataLoaded = true;
+    
+    var wholeFamily = $scope.currentProduct.family;
+    
+    $scope.relatedProduct = [];
+    
+    if(wholeFamily != null && wholeFamily.length > 0){
+      var filteredFamily = wholeFamily.filter(item => item !== $scope.currentProduct.model);
+      filteredFamily.forEach(function(entry){
+        console.log(entry);
+        var modelInFamily = $firebaseObject(ref.orderByChild('model').equalTo(entry).limitToFirst(1));
+        modelInFamily.$loaded().then(function(){
+          $scope.relatedProduct.push(modelInFamily[entry]);
+        });
+      });
+      $scope.dataLoaded = true;
+    }
+    else{
+      $scope.dataLoaded = true;
+    }
+    console.log($scope.relatedProduct);
+
+
+
   });
   
   
@@ -40,6 +62,7 @@ angular.module('genIceApp')
       });;
     }
   };
+  console.log("log product");
   console.log(prod);
   
   });

@@ -10,6 +10,8 @@
 angular.module('genIceApp')
   .controller('StoreCtrl', function ($firebaseObject) {
     const rootRef = firebase.database().ref().child('products');
-    const ref = rootRef.child('icemaker');
+    const ref = rootRef.child('icemaker').orderByChild('basemodel').equalTo(true);
+    
     this.products = $firebaseObject(ref);
+    console.log(this.products);
   });
