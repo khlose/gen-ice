@@ -56,8 +56,11 @@ angular.module('genIceApp')
   title: "สินค้าหมด",
    text: "กรุณาสั่งซื้อผ่านทางอีเมล์",
     type: "error",
-    confirmButtonText: "ไปที่หน้าอีเมล์"
-  }).then(function() {
+    confirmButtonText: "ไปที่หน้าอีเมล์",
+        showCancelButton: true
+        
+  }).then(function(result) {
+        if(result.value)
         window.location.href = "#!/contact";
       });;
     }

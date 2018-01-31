@@ -207,15 +207,21 @@
                                         <li  ng-repeat="(key, value) in relatedProduct">
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
                                                 <a href="single.html"><img src="{{value.imageurl}}"></a>
-                                                <span class="property-seeker">
+<!--                                                <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
-                                                </span>
+                                                </span>-->
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
+                                              <div class="property-spec">
                                                 <h6> <a href="single.html" class="property-price">{{value.model}}</a></h6>
-                                                <span class="property-price">฿{{value.price}}</span>
-                                              <hr>
+                                                </div>
+                                              <div class="property-spec">
+                                                <h7 class="property-price">กำลังผลิต {{value.production}} kg/วัน</h7>
+                                              </div>
+                                              <div class="property-spec">
+                                                <h7 class="property-price">฿{{value.price}}</h7>
+                                              </div>
                                             </div>
                                           
                                         </li>
