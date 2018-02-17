@@ -20,7 +20,7 @@ angular.module('genIceApp')
     $scope.relatedProduct = [];
     
     if(wholeFamily != null && wholeFamily.length > 0){
-      var filteredFamily = wholeFamily.filter(item => item !== $scope.currentProduct.model);
+      var filteredFamily = wholeFamily.filter(function(e){return e !== $scope.currentProduct.model});
       filteredFamily.forEach(function(entry){
         console.log(entry);
         var modelInFamily = $firebaseObject(ref.orderByChild('model').equalTo(entry).limitToFirst(1));
