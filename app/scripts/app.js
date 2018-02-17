@@ -75,6 +75,11 @@ angular
         controller: 'ProductCtrl',
         controllerAs: 'product'
       })
+      .when('/calculator', {
+        templateUrl: 'views/calculator.html',
+        controller: 'CalculatorCtrl',
+        controllerAs: 'calculator'
+      })
       .otherwise({
         redirectTo: '/'
       });
