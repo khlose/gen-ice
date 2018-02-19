@@ -53,19 +53,19 @@ angular.module('genIceApp')
       
       
       swal({ 
-  title: "สินค้าหมด",
-   text: "กรุณาสั่งซื้อผ่านทางอีเมล์",
-    type: "error",
-    confirmButtonText: "ไปที่หน้าอีเมล์",
+  title: "กรุณากรอกอีเมล์ติดต่อ",
+   text: "ทางบริษัทจะติดต่อกลับผ่านทางอีเมล์ด้านล่างเพื่อดำเนินการซื้อขายโดยทันที",
+    type: "info",
+        input: 'email',
+    confirmButtonText: "Confirm",
         showCancelButton: true
         
   }).then(function(result) {
         if(result.value)
-        window.location.href = "#!/contact";
+          //send email
       });;
     }
   };
-  console.log("log product");
-  console.log(prod);
+
   
   });

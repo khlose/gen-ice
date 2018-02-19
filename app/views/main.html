@@ -14,28 +14,29 @@
       <div class="text-center">
         <div class="col-md-3">
           <div class="hi-icon-wrap hi-icon-effect wow">
-            <i class="feature-fa fa fa-address-book"></i>
-            <h2>ติดต่อได้ตลอดเวลา</h2>
+            <!--<i class="feature-fa fa fa-address-book"></i>-->
+            <img src="../images/gen-ice-thumb-40px.png" class="feature-fa fa fa-address-book"/>
+            <h2>ความเป็นมา</h2>
             <p>ท่านสามารถติดต่อเราได้ตลอดเวลาผ่านทางอีเมล์ โทรศัพท์ Facebook และ Line</p>
           </div>
         </div>
         <div class="col-md-3">
           <div class="hi-icon-wrap hi-icon-effect wow ">
-            <i class="feature-fa fa fa-money"></i>
-            <h2>ทดลองใช้ฟรี</h2>
+            <i class="feature-fa fa fa-cubes"></i>
+            <h2>ชนิดของน้ำแข็ง</h2>
             <p>หากท่านยังไม่มั่นใจในสินค้าของเรา ท่านสามารถทดลองใช้สินค้าได้ฟรีก่อนตัดสินใจ</p>
           </div>
         </div>
         <div class="col-md-3">
           <div class="hi-icon-wrap hi-icon-effect wow ">
-            <i class="feature-fa fa fa-wrench"></i>
-            <h2>ไม่ต้องรอซ่อม</h2>
+            <i class="feature-fa fa fa-users"></i>
+            <h2>ทีมบริการ</h2>
             <p>หากสินค้าเกิดปัญหาขัดข้องหรือชำรุด ท่านสามารถรับอะไหล่ไปเปลี่ยนได้ทันที</p>
           </div>
         </div>
         <div class="col-md-3">
           <div class="hi-icon-wrap hi-icon-effect wow ">
-            <i class="feature-fa fa fa-check-square"></i>
+            <i class="feature-fa fa fa-trophy"></i>
             <h2>รับประกันยาวนาน</h2>
             <p>ทางเรารับประกันสินค้านานถึง2ปี และยังมีบริการหลังการขาย1ปี</p>
           </div>
@@ -72,7 +73,9 @@
                                 <div class="item-entry overflow">
                                     <h5><a ng-href="#!/product/{{value.model}}">{{value.model}}</a></h5>
                                     <div class="dot-hr"></div>  
-                                    <span class="proerty-price pull-right">฿{{value.price}}</span>
+                                    <!--<span class="proerty-price pull-right">฿{{value.price}}</span>-->
+                                  <img src="../images/square-20.png">น้ำแข็ง{{value.icetype}}
+                                  <span class="proerty-price pull-right"><a href="{{value.specurl}}" target="_blank">spec sheet</a></span>
                                 </div>
                             </div>
                         </div>
@@ -83,8 +86,8 @@
                                 </div>
                                 <div class="more-entry overflow">
                                     <h5><a ng-href="#!/store" >ไม่พบสินค้าที่ถูกใจใช่หรือไม่?</a></h5>
-                                    <h5 class="tree-sub-ttl">ดูสินค้าทั้งหมด</h5>
-                                  <button class="btn border-btn more-black" value="All products"><a ng-href="#!/store">ไปที่ร้านค้า</a></button>
+                                    <!--<h5 class="tree-sub-ttl">ดูสินค้าทั้งหมด</h5>-->
+                                  <button class="btn border-btn more-black" value="All products"><a ng-href="#!/store">ดูสินค้าทั้งหมด</a></button>
                                 </div>
                             </div>
                         </div>

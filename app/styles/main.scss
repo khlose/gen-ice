@@ -1218,9 +1218,27 @@ ul.list-inline{
   -o-transition:  color 300ms, background-color 300ms;
   transition:  color 300ms, background-color 300ms;
 }
+.hi-icon-effect img.fa:hover {
+	background:#fff;
+	color: #346B8B;
+	-webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
 
 
 .text-center i.feature-fa{
+	font-size:40px;
+	margin-top:70px;
+	margin-bottom:30px;
+	color:#fff;
+	padding:50px;
+	background:#346B8B;
+	border-radius:50%;
+}
+
+.text-center img.feature-fa{
 	font-size:40px;
 	margin-top:70px;
 	margin-bottom:30px;
@@ -2185,7 +2203,8 @@ single property page
 }
 .single-property-header .property-price{
     color: #326A88;
-    font-size: 30px;
+    /*font-size: 30px;//for number*/
+  font-size: 20px;
     letter-spacing: 1.5px;
     right: 0px;
     border-bottom: 2px solid;
