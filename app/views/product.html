@@ -19,17 +19,17 @@
                             <div class="light-slide-item">            
                                 <div class="clearfix">
                                     <div class="favorite-and-print">
-                                        <a class="add-to-fav" href="#login-modal" data-toggle="modal">
+                                        <!--<a class="add-to-fav" href="#login-modal" data-toggle="modal">
                                             <i class="fa fa-star-o"></i>
                                         </a>
                                         <a class="printer-icon " href="javascript:window.print()">
                                             <i class="fa fa-print"></i> 
-                                        </a>
+                                        </a>-->
                                     </div> 
 
                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                         <li> 
-                                            <img src="{{currentProduct.imageurl}}" />
+                                            <img src="{{currentProduct.wideimageurl}}" />
                                         </li>                                       
                                     </ul>
                                 </div>
@@ -166,7 +166,7 @@
                                     <ul>
                                         <li  ng-repeat="(key, value) in relatedProduct">
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
-                                                <a href="single.html"><img src="{{value.imageurl}}"></a>
+                                                <a ng-href="#!/product/{{value.model}}"><img src="{{value.imageurl}}"></a>
 <!--                                                <span class="property-seeker">
                                                     <b class="b-1">A</b>
                                                     <b class="b-2">S</b>
@@ -174,7 +174,7 @@
                                             </div>
                                             <div class="col-md-8 col-sm-8 col-xs-8 blg-entry">
                                               <div class="property-spec">
-                                                <h6> <a href="single.html" class="property-price">{{value.model}}</a></h6>
+                                                <h6> <a ng-href="#!/product/{{value.model}}" class="property-price">{{value.model}}</a></h6>
                                                 </div>
                                               <div class="property-spec">
                                                 <h7 class="property-price">กำลังผลิต {{value.production}} kg/วัน</h7>
@@ -182,7 +182,7 @@
                                               <!--<div class="property-spec">
                                                 <h7 class="property-price">฿{{value.price}}</h7>
                                               </div>-->
-                                            </div>
+                                          </div>
                                           
                                         </li>
                                        

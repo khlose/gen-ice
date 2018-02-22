@@ -29,11 +29,7 @@ angular.module('genIceApp')
     
   
   
-/*
-  $scope.dataLoaded = !this.products.$resolved;
-  console.log($scope.dataLoaded);
-  console.log(this.products);
-*/
+
 
   })
  .controller('HeaderCtrl', function ($scope, $location) { 
