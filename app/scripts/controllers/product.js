@@ -52,26 +52,26 @@ angular.module('genIceApp')
     else{
       
       
-/*      swal({ 
+      swal({ 
         title: "สินค้าหมด",
-        text: "กรุณาสั่งซื้อผ่านทางอีเมล์",
+        text: "กรุณาสั่งซื้อผ่านทางอีเมล์ ระบบจะทำการเปิดแอพอีเมล์อัตโนมัติ",
         type: "error",
         confirmButtonText: "ไปที่หน้าอีเมล์",
         showCancelButton: true
         
       }).then(function(result) {
         if(result.value)
-          window.location.href = "#!/contact";
-      });;*/
+          window.location.href = "mailto:genice@hokgroup.co.th?subject=Purchase order for " + $scope.currentProduct.model + "&body=I'm interested in buying " + $scope.currentProduct.model+" Please contact me back through this email.";
+      });;
       
-      swal({
+/*      swal({
         title: 'Submit email to run ajax request',
         html: "<form action=\"https://formspree.io/your@email.com\" method=\"POST\"><input type=\"text\" name=\"name\"><input type=\"email\" name=\"_replyto\"><input type=\"submit\" value=\"Send\"></form>"
         
-        /*input: 'email',
+        input: 'email',
         showCancelButton: true,
-        confirmButtonText: 'Submit',*/
-      });
+        confirmButtonText: 'Submit',
+      });*/
       
       
 /*      swal({
