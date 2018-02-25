@@ -52,7 +52,7 @@ angular.module('genIceApp')
     else{
       
       
-      swal({ 
+/*      swal({ 
         title: "สินค้าหมด",
         text: "กรุณาสั่งซื้อผ่านทางอีเมล์",
         type: "error",
@@ -62,7 +62,17 @@ angular.module('genIceApp')
       }).then(function(result) {
         if(result.value)
           window.location.href = "#!/contact";
-      });;
+      });;*/
+      
+      swal({
+        title: 'Submit email to run ajax request',
+        html: "<form action=\"https://formspree.io/your@email.com\" method=\"POST\"><input type=\"text\" name=\"name\"><input type=\"email\" name=\"_replyto\"><input type=\"submit\" value=\"Send\"></form>"
+        
+        /*input: 'email',
+        showCancelButton: true,
+        confirmButtonText: 'Submit',*/
+      });
+      
       
 /*      swal({
         title: 'Submit email to run ajax request',
