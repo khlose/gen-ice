@@ -33,7 +33,7 @@ angular.module('genIceApp')
     else{
       $scope.dataLoaded = true;
     }
-    console.log($scope.relatedProduct);
+    //console.log($scope.relatedProduct);
 
 
 
