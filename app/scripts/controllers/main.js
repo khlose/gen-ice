@@ -24,7 +24,6 @@ angular.module('genIceApp')
     prod.$loaded().then(function(){
       $scope.products = prod;
       $scope.dataLoaded = true;
-      console.log($scope.dataLoaded);
   });
     
   

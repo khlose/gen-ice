@@ -16,18 +16,19 @@
                     <div class="col-md-8 col-md-offset-2"> 
                         <div class="" id="contact1">                        
                             <!--<h2>Contact form</h2>-->
-                            <form>
+                          
+                            <form ng-submit="calculate()">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="firstname">ปริมาณน้ำแข็งที่ซื้อ (กก./วัน)</label>
-                                            <input type="text" class="form-control" id="ice-amount" value=0>
+                                            <input type="number" step="any" class="form-control" ng-model="ice_amount" ng-change="update_monthly_ice()">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="lastname">ราคาน้ำแข็ง (บาท/กก.)</label>
-                                            <input type="text" class="form-control" id="ice-price" value=0>
+                                            <input type="number" step="any" class="form-control" ng-model="ice_price" ng-change="update_monthly_ice()">
                                         </div>
                                     </div>
                                   
@@ -35,30 +36,26 @@
                                         <div class="form-group">
                                             <label for="email">ค่าน้ำแข็งต่อเดือน (บาท)</label>
                                             <!--<input type="text" class="form-control" id="email">-->
-                                            <h4 id="per-month-cost"> 0 </h4>
+                                            <h4> {{ per_month_ice_cost }}  </h4>
                                         </div>
                                     </div>
                                   <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="firstname">ค่าไฟ (บาท/ยูนิต)</label>
-                                            <input type="text" class="form-control" id="elec-cost" value=4>
+                                            <input type="number" step="any" class="form-control" ng-model="elec_cost" ng-change="update_electricity_water_cost()">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="lastname">ค่าน้ำ (บาท/ยูนิต)</label>
-                                            <input type="text" class="form-control" id="water-cost" value=15.8>
+                                            <input type="number" step="any" class="form-control"  ng-model="water_cost" ng-change="update_electricity_water_cost()">
                                         </div>
                                     </div>
                                   
                                   <div class="col-sm-12">
                                         <div class="form-group">
                                             <label for="email">รุ่นเครื่องที่สนใจ</label>
-                                            <select class="form-control" id="sel1">
-                                              <option>1</option>
-                                              <option>2</option>
-                                              <option>3</option>
-                                              <option>4</option>
+                                            <select class="form-control" id="select-model" ng-options="product as product.key for product in products track by item.model" ng-model="selected" ng-change="update_electricity_water_cost()">
                                           </select>
                                         </div>                            
                                                                       
@@ -67,14 +64,14 @@
                                         <div class="form-group">
                                             <label for="email">เครื่องใช้ไฟ(ยูนิต/วัน)</label>
                                             <!--<input type="text" class="form-control" id="email">-->
-                                            <h4 id="daily-elec-unit"> 0 </h4>
+                                            <h4 id="daily-elec-unit"> {{daily_elec_unit}} </h4>
                                         </div>
                                     </div>
                                                                     <div class="col-sm-3">
                                         <div class="form-group">
                                             <label for="email">เครื่องใช้น้ำประปา(ยูนิต/วัน)</label>
                                             <!--<input type="text" class="form-control" id="email">-->
-                                            <h4 id="daily-water-unit"> 0 </h4>
+                                            <h4 id="daily-water-unit"> {{daily_water_unit}} </h4>
                                         </div>
                                     </div>
                                   <div class="col-sm-3">
