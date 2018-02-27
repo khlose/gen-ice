@@ -8,13 +8,64 @@
  * Controller of the genIceApp
  */
 angular.module('genIceApp')
-  .controller('CalculatorCtrl', function ($firebaseObject,$scope) {
+  .controller('CalculatorCtrl', function () {
   
-    $scope.ice_amount = 200;
-    $scope.ice_price = 2.5;
+  
+  }).controller('RecommendationCtrl', function ($firebaseObject,$scope) {
+  $scope.ice_amount = 120;
+  $scope.ice_price = 2.5;
+  $scope.elec_cost = 4.20;
+  $scope.water_cost = 15.80;
+  
+  
+  $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
+  $scope.per_month_ice_cost = $scope.per_day_ice_cost*30;
+      
+  
+   $scope.update_monthly_ice = function(){
+      /*$scope.per_month_ice_cost = $scope.ice_amount * $scope.ice_price * 30;*/
+      $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
+      $scope.per_month_ice_cost = $scope.per_day_ice_cost*30;
+      
+    }
+   
+   $scope.calculate = function(){
+     
+     
+     const rootRef = firebase.database().ref().child('products');
+     const ref = rootRef.child('icemaker').orderByChild('production').startAt($scope.ice_amount);
+     
+     var rawProd = $firebaseObject(ref);
+     
+     $scope.products = []; 
+     rawProd.$loaded().then(function(){
+       angular.forEach(rawProd,function(key,value){
+         $scope.products.push({key:value,value:key});
+       });
+       
+       console.log($scope.products);
+       
+     });
+     
+     
+     
+     
+     
+     
+   }
+  
+  
+    
+  
+  }).controller('BreakevenCtrl', function ($firebaseObject,$scope) {
+  
+  
+  $scope.ice_amount = 200;
+  $scope.ice_price = 2.5;
   $scope.elec_cost = 4.20;
   $scope.water_cost = 15.80;
   $scope.discount = 0;
+  $scope.product_price = 0;
   
       $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
   $scope.per_month_ice_cost = $scope.per_day_ice_cost *30;
@@ -51,7 +102,7 @@ angular.module('genIceApp')
       
       $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
       
-      $scope.break_even = (parseFloat($scope.selected.value.price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);   
+      $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);   
     });
 
 
@@ -72,7 +123,7 @@ angular.module('genIceApp')
       
             $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
       
-            $scope.break_even = (parseFloat($scope.selected.value.price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
+            $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
       console.log($scope.discount);
       
       
@@ -99,11 +150,12 @@ angular.module('genIceApp')
       
       $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
       
-      $scope.break_even = (parseFloat($scope.selected.value.price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
+      $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
       
       
       console.log($scope.discount);
       
     }
   
-  });
+  
+});

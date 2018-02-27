@@ -11,8 +11,12 @@
 
         <!-- property area -->
         <div class="content-area recent-property padding-top-40" style="background-color: #FFF;">
-            <div class="container">  
-                <div class="row">
+            <div class="container"> 
+              
+              <h3>แนะนำรุ่นสินค้า</h3> 
+              <hr>
+              
+                <div class="row" ng-controller="RecommendationCtrl">
                     <div class="col-md-8 col-md-offset-2"> 
                         <div class="" id="contact1">                        
                             <!--<h2>Contact form</h2>-->
@@ -62,7 +66,75 @@
                                         </div>
                                     </div>
                                   
+
+                                    <div class="col-sm-12 text-center">
+                                        <button type="submit" class="btn btn-primary">แสดงรุ่นสินค้าที่เหมาะสม</button>
+                                      
+                                    </div>
+                                  
+                                </div>
+                                <!-- /.row -->
+                            </form>
+                        </div>
+                    </div>    
+                </div>
+          
+          
+          
+              <h3>คำนวณจุดคุ้มทุน</h3> 
+              <hr>
+              
+              <div class="row" ng-controller="BreakevenCtrl">
+                    <div class="col-md-8 col-md-offset-2"> 
+                        <div class="" id="contact1">                        
+                            <!--<h2>Contact form</h2>-->
+                          
+                            <form ng-submit="calculate()">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstname">ปริมาณน้ำแข็งที่ซื้อ (กก./วัน)</label>
+                                            <input type="number" step="any" class="form-control" ng-model="ice_amount" ng-change="update_monthly_ice()">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastname">ราคาน้ำแข็ง (บาท/กก.)</label>
+                                            <input type="number" step="any" class="form-control" ng-model="ice_price" ng-change="update_monthly_ice()">
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">ค่าน้ำแข็งต่อวัน </label>
+                                           
+                                            <h4> {{ per_day_ice_cost }} บาท </h4>
+                                        </div>
+                                    </div>
                                   <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">ค่าน้ำแข็งต่อเดือน</label>
+                                           
+                                            <h4> {{ per_month_ice_cost }} บาท </h4>
+                                        </div>
+                                    </div>
+                                  
+                                  
+                                  <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstname">ค่าไฟ (บาท/ยูนิต)</label>
+                                            <input type="number" step="any" class="form-control" ng-model="elec_cost" ng-change="update_electricity_water_cost()">
+                                        </div>
+                                    </div>
+                                  
+                                  <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastname">ค่าน้ำ (บาท/ยูนิต)</label>
+                                            <input type="number" step="any" class="form-control"  ng-model="water_cost" ng-change="update_electricity_water_cost()">
+                                        </div>
+                                    </div>
+                                  
+                                  <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="email">รุ่นเครื่องที่สนใจ</label>
                                             <select class="form-control" id="select-model" ng-options="product as product.key for product in products" ng-model="selected" ng-change="update_electricity_water_cost()">
@@ -71,12 +143,21 @@
                                                                       
                                     </div>
                                   
-                                                                    
-                                  <div class="col-sm-6">
+                                  <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label for="discount">ราคาเครื่อง (บาท)</label>
+                                            <input type="number" step="any" class="form-control" ng-model="product_price" ng-change="update_monthly_ice()">
+                                          
+                                        </div>                            
+                                                                      
+                                    </div>   
+                                  
+                                  
+                                  <div class="col-sm-4">
                                         <div class="form-group">
                                             <label for="discount">ส่วนลด (%)</label>
                                             <input type="number" step="any" class="form-control" ng-model="discount" ng-change="update_monthly_ice()" min="0" max="100">
-                                          </select>
+                                          
                                         </div>                            
                                                                       
                                     </div>
@@ -180,15 +261,17 @@
                                   
                                   
 
-                                    <!--<div class="col-sm-12 text-center">
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-calculator"></i> คำนวณ</button>
-                                    </div>-->
+                                    
                                   
                                 </div>
                                 <!-- /.row -->
                             </form>
                         </div>
-                    </div>    
-                </div>
+          
+          
+          
+          
+          
+          
             </div>
         </div>
