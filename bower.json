@@ -15,7 +15,8 @@
     "swiper": "^4.1.0",
     "angularfire": "^2.3.0",
     "firebase": "^4.9.0",
-    "sweetalert2": "^7.8.1"
+    "sweetalert2": "^7.8.1",
+    "angular-bootstrap": "^2.5.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

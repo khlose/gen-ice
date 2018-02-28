@@ -11,7 +11,7 @@ angular.module('genIceApp')
   .controller('CalculatorCtrl', function () {
   
   
-  }).controller('RecommendationCtrl', function ($firebaseObject,$scope) {
+  }).controller('RecommendationCtrl', function ($firebaseObject,$scope,$uibModal) {
   $scope.ice_amount = 120;
   $scope.ice_price = 2.5;
   $scope.elec_cost = 4.20;
@@ -29,24 +29,19 @@ angular.module('genIceApp')
       
     }
    
-   $scope.calculate = function(){
-     
-     
-     const rootRef = firebase.database().ref().child('products');
-     const ref = rootRef.child('icemaker').orderByChild('production').startAt($scope.ice_amount);
-     
-     var rawProd = $firebaseObject(ref);
-     
-     $scope.products = []; 
-     rawProd.$loaded().then(function(){
-       angular.forEach(rawProd,function(key,value){
-         $scope.products.push({key:value,value:key});
-       });
-       
-       
-       console.log($scope.products);
-       
-       
+   
+   $scope.products = []; 
+   
+   $scope.showRecommendation = function(){
+     var modalInsttancee = $uibModal.open({
+       animation: $scope.animationEnabled,
+       templateUrl:'views/recommendedItemModal.html',
+       controller:'ModalInstanceCtrl',
+       resolve:{
+         models: function(){
+           return $scope.products;
+         }
+       }
        
      });
      
@@ -54,11 +49,40 @@ angular.module('genIceApp')
      
      
      
+   }
+   
+   
+   $scope.calculate = function(){
+      
+     const rootRef = firebase.database().ref().child('products');
+     const ref = rootRef.child('icemaker').orderByChild('production').startAt($scope.ice_amount);
      
+     var rawProd = $firebaseObject(ref);
+     
+     
+     rawProd.$loaded().then(function(){
+       angular.forEach(rawProd,function(key,value){
+         $scope.products.push({key:value,value:key});
+       });
+       
+       
+       console.log($scope.products);
+
+       
+     });
+ 
    }
   
   
     
+  //$modalInstance
+  }).controller('ModalInstanceCtrl', function ($scope, models,$uibModalInstance){
+    $scope.recommendedModels = models;
+  
+    $scope.ok = function () {
+    $uibModalInstance.close();
+    }
+  
   
   }).controller('BreakevenCtrl', function ($firebaseObject,$scope) {
   

@@ -20,6 +20,7 @@ var config = {
  
 angular
   .module('genIceApp', [
+  'ui.bootstrap',
     'firebase',
     'ngAnimate',
     'ngCookies',
