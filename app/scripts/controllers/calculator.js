@@ -43,7 +43,10 @@ angular.module('genIceApp')
          $scope.products.push({key:value,value:key});
        });
        
+       
        console.log($scope.products);
+       
+       
        
      });
      
