@@ -66,7 +66,7 @@ angular.module('genIceApp')
        });
        
        
-       console.log($scope.products);
+       
 
        
      });
@@ -137,7 +137,7 @@ angular.module('genIceApp')
   
   
   $scope.calculate = function(){
-      console.log($scope.ice_amount);
+      
     }
     
   
@@ -151,7 +151,7 @@ angular.module('genIceApp')
             $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
       
             $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
-      console.log($scope.discount);
+      
       
       
     }
@@ -180,7 +180,7 @@ angular.module('genIceApp')
       $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
       
       
-      console.log($scope.discount);
+      
       
     }
   

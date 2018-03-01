@@ -1,20 +1,58 @@
 <div class="modal-header">
-    <h3>รุ่นที่แนะนำ</h3>
+    <h2>รุ่นที่แนะนำ</h2>
 </div>
 
 
 <div class="row">
   
-  <div class="row">
+<!--  <div class="row">
 
     <ul>
       <li ng-repeat="(key, value) in recommendedModels">
-        {{value.key}}
+        {{value.value}}
+      </li>
+    </ul>
+    
+    
+  </div>-->
+  
+  <div class="panel-body recent-property-widget">
+    <ul>
+      
+      <li  ng-repeat="(key, value) in recommendedModels">
+        <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
+          <a ng-href="#!/product/{{value.value.model}}"><img src="{{value.value.imageurl}}"></a>
+        </div>
+        <div class="col-md-6 col-sm-5 col-xs-5 blg-entry">
+          <div class="property-spec">
+            <h6> <a ng-href="#!/product/{{value.value.model}}" class="property-price">{{value.value.model}}</a></h6>
+          </div>
+          <div class="property-spec">
+            <h7 class="property-price">น้ำแข็งชนิด{{value.value.icetype}}</h7>
+          </div>
+                    <div class="property-spec">
+            <h7 class="property-price">กำลังผลิต {{value.value.production}} kg/วัน</h7>
+          </div>
+                    <div class="property-spec">
+            <h7 class="property-price">ถังจุขนาด {{value.value.storage}} kg</h7>
+          </div>
+          <!--<div class="property-spec">
+            <h7 class="property-price">ใช้ไฟวันละ {{value.value.power}} วัตต์</h7>
+          </div>-->
+
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-4 blg-entry">
+          <a ng-href="#!/product/{{value.value.model}}" ><button class="btn btn-info" type="button" ng-click="ok()">รายละเอียด</button></a>
+        </div>
+        
+
       </li>
     </ul>
     
     
   </div>
+  
+  
 </div>
 
 <div class="modal-footer">

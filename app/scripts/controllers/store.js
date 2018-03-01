@@ -13,5 +13,4 @@ angular.module('genIceApp')
     const ref = rootRef.child('icemaker').orderByChild('basemodel').equalTo(true);
     
     this.products = $firebaseObject(ref);
-    console.log(this.products);
   });
