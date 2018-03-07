@@ -1792,8 +1792,12 @@ padding: 0 0 0.5em;
 }
 /*Tools CSS*/
 .p0{
-    padding: 0px;
+    padding: 0px;  
 }
+.p0x{
+    padding-left: 15px   
+}
+
 .overflow{
     overflow: hidden;
 }
@@ -1813,7 +1817,7 @@ padding: 0 0 0.5em;
 }
 .box-two {
     background: #FFF none repeat scroll 0% 0%;
-
+    
     border: 1px solid #E6E6E6;
     box-sizing: border-box;
 
@@ -1903,7 +1907,21 @@ proerty-th
 .proerty-th .proerty-item .item-thumb:hover .tm_mask {
     opacity: 1;
 }
-.proerty-th .proerty-item  .item-thumb img{
+
+
+@media (min-width: 0px) and (max-width: 766px){
+  .proerty-th .proerty-item  .item-thumb img{
+    transition: all 0.2s linear 0s;
+    display: block;
+    position: relative;
+    opacity: 0.7;
+    width: 100%;
+    max-width: 766px;
+    height: auto;
+  } 
+}
+@media (min-width: 767px) {
+  .proerty-th .proerty-item  .item-thumb img{
     transition: all 0.2s linear 0s;
     display: block;
     position: relative;
@@ -1912,6 +1930,9 @@ proerty-th
     min-height: 225px;
     max-height: 265px;
 }
+}
+
+
 .proerty-th .proerty-item  .item-entry{
     padding: 8px;
 
