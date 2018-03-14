@@ -40,6 +40,11 @@ input[type="number"] {
   
 }
 
+ul.no-bullet-list{
+  list-style-type: none;
+}
+
+
 .swiper-container {
     width: auto;
     height: 600px;
@@ -1230,33 +1235,8 @@ ul.list-inline{
 	padding:50px;
 }
 
-.hi-icon-effect i.fa:hover {
-	background:#fff;
-	color: #346B8B;
-	-webkit-transition: color 300ms, background-color 300ms;
-  -moz-transition: color 300ms, background-color 300ms;
-  -o-transition:  color 300ms, background-color 300ms;
-  transition:  color 300ms, background-color 300ms;
-}
-.hi-icon-effect img.fa:hover {
-	background:#fff;
-	color: #346B8B;
-	-webkit-transition: color 300ms, background-color 300ms;
-  -moz-transition: color 300ms, background-color 300ms;
-  -o-transition:  color 300ms, background-color 300ms;
-  transition:  color 300ms, background-color 300ms;
-}
 
-
-.hi-icon-effect i.fas:hover {
-	background:#fff;
-	color: #346B8B;
-	-webkit-transition: color 300ms, background-color 300ms;
-  -moz-transition: color 300ms, background-color 300ms;
-  -o-transition:  color 300ms, background-color 300ms;
-  transition:  color 300ms, background-color 300ms;
-}
-.hi-icon-effect img.fas:hover {
+.hi-icon-effect i.feature-fa:hover {
 	background:#fff;
 	color: #346B8B;
 	-webkit-transition: color 300ms, background-color 300ms;
@@ -1266,6 +1246,14 @@ ul.list-inline{
 }
 
 
+.hi-icon-effect img.feature-fa:hover {
+	background:#fff;
+	color: #346B8B;
+	-webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
 
 .text-center i.feature-fa{
 	font-size:40px;
@@ -1283,7 +1271,7 @@ ul.list-inline{
 	margin-bottom:30px;
 	color:#fff;
 	padding:50px;
-	background:#346B8B;
+	background:#346B8B; //
 	border-radius:50%;
 }
 
@@ -1332,8 +1320,20 @@ font-weight: 500;
     height: 2px;
 }
 
+h1.head-brand{
+  font-size: 12px;
+  padding-top: 5px;
+  
+}
+
+@media (min-width: 0px) and (max-width: 766px){
+ h1.head-brand{
+   text-align: center;
+  }
+}
+
 .header-connect{
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .header-call p{
     color: #666666;
