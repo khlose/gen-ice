@@ -1248,6 +1248,25 @@ ul.list-inline{
 }
 
 
+.hi-icon-effect i.fas:hover {
+	background:#fff;
+	color: #346B8B;
+	-webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
+.hi-icon-effect img.fas:hover {
+	background:#fff;
+	color: #346B8B;
+	-webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
+
+
+
 .text-center i.feature-fa{
 	font-size:40px;
 	margin-top:70px;
