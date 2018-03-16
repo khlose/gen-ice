@@ -35,7 +35,7 @@ angular.module('genIceApp')
         templateUrlLocation = 'views/companyBrief.html';
         break;
       case 2:
-        templateUrlLocation = 'views/certificate.html';
+        templateUrlLocation = 'views/icetype.html';
         break;
       case 3:
         templateUrlLocation = 'views/serviceTeam.html';
