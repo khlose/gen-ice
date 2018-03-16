@@ -29,6 +29,22 @@ input[type="number"] {
 }
 
 
+.banner-fit-center{
+  
+    max-width: 100%;
+    max-height: 100%;
+  
+  
+    display: block;
+    margin: auto;
+  
+}
+
+ul.no-bullet-list{
+  list-style-type: none;
+}
+
+
 .swiper-container {
     width: auto;
     height: 600px;
@@ -883,6 +899,7 @@ ul.list-inline{
   margin: 0px;
   width: auto;
   padding: 0px 0px 15px 0px;
+  font-size: 18px;
 }
 
 @media (min-width: 0px) and (max-width: 766px)
@@ -1219,15 +1236,8 @@ ul.list-inline{
 	padding:50px;
 }
 
-.hi-icon-effect i.fa:hover {
-	background:#fff;
-	color: #346B8B;
-	-webkit-transition: color 300ms, background-color 300ms;
-  -moz-transition: color 300ms, background-color 300ms;
-  -o-transition:  color 300ms, background-color 300ms;
-  transition:  color 300ms, background-color 300ms;
-}
-.hi-icon-effect img.fa:hover {
+
+.hi-icon-effect i.feature-fa:hover {
 	background:#fff;
 	color: #346B8B;
 	-webkit-transition: color 300ms, background-color 300ms;
@@ -1236,6 +1246,15 @@ ul.list-inline{
   transition:  color 300ms, background-color 300ms;
 }
 
+
+.hi-icon-effect img.feature-fa:hover {
+	background:#fff;
+	color: #346B8B;
+	-webkit-transition: color 300ms, background-color 300ms;
+  -moz-transition: color 300ms, background-color 300ms;
+  -o-transition:  color 300ms, background-color 300ms;
+  transition:  color 300ms, background-color 300ms;
+}
 
 .text-center i.feature-fa{
 	font-size:40px;
@@ -1253,7 +1272,7 @@ ul.list-inline{
 	margin-bottom:30px;
 	color:#fff;
 	padding:50px;
-	background:#346B8B;
+	background:#346B8B; //
 	border-radius:50%;
 }
 
@@ -1302,8 +1321,26 @@ font-weight: 500;
     height: 2px;
 }
 
+
+
+
+@media (min-width: 767px){
+ h1.head-brand{
+     font-size: 20px;
+  padding-top: 5px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 766px){
+ h1.head-brand{
+   font-size: 16px;
+   padding-top: 5px;
+   text-align: center;
+  }
+}
+
 .header-connect{
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .header-call p{
     color: #666666;
@@ -1321,14 +1358,45 @@ font-weight: 500;
 .header-social ul{
     padding-top: 5px
 }
-.header-social ul li a{
+
+
+
+
+.header-social ul li{
     color: #666666;
-    font-size: 14px
+
+    text-decoration: none;
 
 }
-.header-social ul li a:hover{
+.header-social ul li:hover{
     color: #326A88
 }
+
+
+
+@media (min-width: 767px){
+
+  .header-social ul li i{
+  padding-top: 10px;
+        font-size: 18px;
+}
+}
+
+@media (min-width: 0px) and (max-width: 766px){
+  .header-social ul li i{
+        font-size: 14px;
+  }
+  
+    .header-social ul li{
+        font-size: 14px;
+      padding-left: 0px;
+      padding-top: 0px;
+  }
+}
+
+
+
+
 
 
 /*====================================================
@@ -1914,7 +1982,7 @@ proerty-th
     transition: all 0.2s linear 0s;
     display: block;
     position: relative;
-    opacity: 0.7;
+    opacity: 1;
     width: 100%;
     max-width: 766px;
     height: auto;
@@ -1926,7 +1994,7 @@ proerty-th
     display: block;
     position: relative;
     width:100%;
-    opacity: 0.7;
+    opacity: 1;
     min-height: 225px;
     max-height: 265px;
 }

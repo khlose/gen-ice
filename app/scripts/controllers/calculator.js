@@ -33,7 +33,7 @@ angular.module('genIceApp')
    $scope.products = []; 
    
    $scope.showRecommendation = function(){
-     var modalInsttancee = $uibModal.open({
+     var modalInstance = $uibModal.open({
        animation: $scope.animationEnabled,
        templateUrl:'views/recommendedItemModal.html',
        controller:'ModalInstanceCtrl',

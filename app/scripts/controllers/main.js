@@ -8,7 +8,7 @@
  * Controller of the genIceApp
  */
 angular.module('genIceApp')
-  .controller('MainCtrl', function ($scope,$firebaseObject) {
+  .controller('MainCtrl', function ($scope,$firebaseObject,$uibModal) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -25,12 +25,49 @@ angular.module('genIceApp')
       $scope.products = prod;
       $scope.dataLoaded = true;
   });
+  
+  
+  $scope.featuredThumbsClicked = function(buttonNo){
+    var modalInstance = null;
+    var templateUrlLocation = '';
+    switch(buttonNo){
+      case 1:
+        templateUrlLocation = 'views/companyBrief.html';
+        break;
+      case 2:
+        templateUrlLocation = 'views/certificate.html';
+        break;
+      case 3:
+        templateUrlLocation = 'views/serviceTeam.html';
+        break;
+      case 4:
+        templateUrlLocation = 'views/warranty.html';
+        break;
+      default:
+        break;
+    }
+    modalInstance = $uibModal.open({
+      animation: $scope.animationEnabled,
+      templateUrl:templateUrlLocation,
+      controller:'ModalInstanceCtrl',
+      resolve:{
+        models: function(){
+        }
+      }
+    });
     
   
   
-
-
+  }
   })
+  .controller('ModalInstanceCtrl', function ($scope, models,$uibModalInstance){
+    $scope.ok = function () {
+    $uibModalInstance.close();
+    }
+  })
+
+
+
  .controller('HeaderCtrl', function ($scope, $location) { 
     $scope.isActive = function (viewLocation) { 
       return viewLocation === $location.path();
