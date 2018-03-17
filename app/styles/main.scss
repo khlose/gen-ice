@@ -122,6 +122,35 @@ ul.no-bullet-list{
 	font-size:13px;
 }
 
+
+
+
+@media (min-width: 767px)
+{
+.media-left{
+  width: 2000px;
+  max-width: 100%;
+}
+  
+
+}
+
+
+
+
+@media (min-width: 0px) and (max-width: 766px)
+{
+  
+  .media ul{
+    padding-left: 0px;
+  }
+.media-left{
+  width: 10000px;
+  max-width: 100%;
+}
+}
+
+
 .media-body p {
 	margin-bottom:30px;
 }
@@ -2251,7 +2280,6 @@ single property page
     background-image: url("../../assets/img/arrow-left.svg");
     background-position: center center;
 }
-
 .favorite-and-print {
     position: absolute;
     z-index: 9;
