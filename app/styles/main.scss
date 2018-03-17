@@ -1396,6 +1396,7 @@ font-weight: 500;
 
     text-decoration: none;
 
+
 }
 .header-social ul li:hover{
     color: #326A88
@@ -1407,17 +1408,17 @@ font-weight: 500;
 
   .header-social ul li i{
   padding-top: 10px;
-        font-size: 18px;
+        font-size: 22px;
 }
 }
 
 @media (min-width: 0px) and (max-width: 766px){
   .header-social ul li i{
-        font-size: 14px;
+        font-size: 30px;
   }
   
     .header-social ul li{
-        font-size: 14px;
+        font-size: 20px;
       padding-left: 0px;
       padding-top: 0px;
   }

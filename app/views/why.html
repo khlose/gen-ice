@@ -16,13 +16,19 @@
   <div class="services">
     <div class="container">
       <h3>จุดเด่นของเรา</h3> 
-      <hr><h5><a href="../images/advantage-page-min.pdf" target="_blank">ดาวน์โหลด PDF</a></h5>
       
       <div class="col-md-6">
-        <img src="../images/factory.png" class="img-responsive">
-<!--        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero,
-          pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque</p>-->
+        <div class="row">
+                <img src="../images/factory.png" class="img-responsive">
+        </div>
+        <div class="row" style="padding-top:15px">
+          <img src="../images/factory2.png" class="img-responsive">
+        </div>
+
+
       </div>
+      
+
 
       <div class="col-md-6">
         <div class="media">
@@ -30,12 +36,12 @@
             
             <li>
               <div class="media-left">
-                 <img src="../images/icon-2year.png" ng-click="featuredThumbsClicked(1)">
+                 <img src="../images/icon-2year.png" >
                                                      
                                      
               </div>
               <div class="media-body" >
-                <h4 class="media-heading" ng-click="featuredThumbsClicked(1)">รับประกัน 2 ปี</h4>
+                <h4 class="media-heading" ng-click="">รับประกัน 2 ปี</h4>
                 <p>เราใช้อุปกรณ์ อะไหล่ คุณภาพมาตรฐาน ยุโรปและอเมริกา ทำให้เรากล้ารับประกันตัวเครื่องอะไหล่ 2 ปี
 ค่าแรงบริการ 1 ปี โดยหากอะไหล่ชำรุดสามารถเปลี่ยนอะไหล่ได้ทันที ไม่ต้องรอซ่อม</p>
               </div>
@@ -56,11 +62,11 @@
             
             <li>
               <div class="media-left">
-                 <img src="../images/icon-globe.png">
+                 <img src="../images/icon-globe.png" >
               </div>
               <div class="media-body">
                 <h4 class="media-heading">ชิ้นส่วนนำเข้ามาตรฐาน ยุโรป อเมริกา</h4>
-                <p>เครื่องผลิตน้ำแข็ง GenIce เลือกใช้อุปกรณ์หลัก 80% เป็นชิ้นส่วนนำเข้าจาก อเมริกา อิตาลี และ เยอรมัน</p>
+                <p ng-click="featuredThumbsClicked(1)">เครื่องผลิตน้ำแข็ง GenIce เลือกใช้อุปกรณ์หลัก 80% เป็นชิ้นส่วนนำเข้าจาก อเมริกา อิตาลี และ เยอรมัน (คลิกเพื่ออ่านต่อ)</p>
               </div>
             </li>
           </ul>
@@ -76,11 +82,11 @@
           <ul>
             <li>
               <div class="media-left">
-                 <img src="../images/icon-machine.png" ng-click="featuredThumbsClicked(2)">
+                 <img src="../images/icon-machine.png">
               </div>
               <div class="media-body">
-                <h4 class="media-heading" ng-click="featuredThumbsClicked(2)">สะดวก และอัจฉริยะ</h4>
-                <p>เครื่องเจ็นไอซ์ มีระบบการทำงานที่ดูแลสะดวก ง่ายดาย</p>
+                <h4 class="media-heading" >สะดวก และอัจฉริยะ</h4>
+                <p ng-click="featuredThumbsClicked(2)">เครื่องเจ็นไอซ์ มีระบบการทำงานที่ดูแลสะดวก ง่ายดาย  (คลิกเพื่ออ่านต่อ)</p>
                 
               </div>
             </li>

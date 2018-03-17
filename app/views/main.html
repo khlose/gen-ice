@@ -17,21 +17,21 @@
             <!--<i class="feature-fa fa fa-address-book"></i>-->
             <img src="../images/gen-ice-thumb-40px.png" class="feature-fa" ng-click="featuredThumbsClicked(1)"/>
             <h2>ความเป็นมา</h2>
-            <p>ท่านสามารถติดต่อเราได้ตลอดเวลาผ่านทางอีเมล์ โทรศัพท์ Facebook และ Line</p>
+            <p ng-click="featuredThumbsClicked(1)">GenIce (เจ็นไอซ์) คือเครื่องทำน้ำแข็ง ที่ผลิตจากโรงานที่มีประสบการณ์ในการผลิตเครื่องทำน้ำแข็งกว่า 15 ปี (อ่านต่อ)</p>
           </div>
         </div>
         <div class="col-md-3">
           <div class="hi-icon-wrap hi-icon-effect wow ">
             <i class="feature-fa fas fa-cubes" ng-click="featuredThumbsClicked(2)"></i>
             <h2>ชนิดของน้ำแข็ง</h2>
-            <p>หากท่านยังไม่มั่นใจในสินค้าของเรา ท่านสามารถทดลองใช้สินค้าได้ฟรีก่อนตัดสินใจ</p>
+            <p ng-click="featuredThumbsClicked(2)">น้ำแข็งมีหลายชนิดมากมาย เช่น สี่เหลี่ยม เกล็ดกรอบ ถ้วยหลอด น้ำแข็งแผ่น ใช้งานที่แตกต่างกัน(อ่านต่อ)</p>
           </div>
         </div>
         <div class="col-md-3">
           <div class="hi-icon-wrap hi-icon-effect wow ">
             <i class="feature-fa fas fa-hand-peace" ng-click="featuredThumbsClicked(4)"></i>
             <h2>รับประกันนาน 2 ปี</h2>
-            <p>ทางเรารับประกันสินค้านานถึง 2 ปีพร้อมบริการหลังการขาย</p>
+            <p ng-click="featuredThumbsClicked(4)">เครืองเจ็นไอซ์ รับประกันสินค้านานถึง 2 ปีพร้อมบริการหลังการขาย (อ่านต่อ)</p>
           </div>
         </div>
         
@@ -40,7 +40,7 @@
           <div class="hi-icon-wrap hi-icon-effect wow ">
             <i class="feature-fa fas fa-users" ng-click="featuredThumbsClicked(3)"></i>
             <h2>ทีมบริการ</h2>
-            <p>หากสินค้าเกิดปัญหาขัดข้องหรือชำรุด ท่านสามารถรับอะไหล่ไปเปลี่ยนได้ทันที</p>
+            <p ng-click="featuredThumbsClicked(3)">เครืองเจ็นไอซ์ มีทีมบริการดูแลซ่อมบำรุงเครื่อง หากสินค้าเกิดปัญหาขัดข้องหรือชำรุด ทั่วประเทศ (อ่านต่อ)</p>
           </div>
         </div>
         
@@ -85,7 +85,7 @@
                                    <div class="col-sm-6 col-md-3 p0">
                             <div class="box-tree more-proerty text-center">
                                 <div class="item-tree-icon">
-                                  <i class="fa fa-th"></i>
+                                  <a ng-href="#!/store" style="color:#777"><i class="fa fa-th"></i></a>
                                 </div>
                                 <div class="more-entry overflow">
                                     <h5><a ng-href="#!/store" >ไม่พบสินค้าที่ถูกใจใช่หรือไม่?</a></h5>
