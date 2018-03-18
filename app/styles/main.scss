@@ -1,7 +1,10 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$main-color: #194D78;
+
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "sweetalert2/src/sweetalert2.scss";
+@import "ng-material-floating-button/mfb/src/mfb.scss";
 // endbower
 
 html, body {
@@ -27,6 +30,44 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 input[type="number"] {
     -moz-appearance: textfield;
 }
+.mfb-component__main-icon--resting{
+  padding-top:16px;
+  padding-left: 2px;
+  font-size: 25px;
+}
+
+.mfb-component__main-icon--active{
+  padding-top:16px;
+  font-size: 25px;
+  padding-left: 2px;
+}
+.mfb-component__child-icon
+{
+  padding-top: 16px;
+  padding-left: 1px;
+  font-size: 25px;
+}
+
+.mfb-component__wrap i{
+  color: white;
+}
+.mfb-component__wrap a{
+  color:transparent;
+  font-weight: normal;
+  
+}
+.mfb-component__wrap i:hover{
+  color: white;
+}
+@media (min-width: 767px)
+{
+  .call-button{
+    visibility: hidden;
+  }
+  
+
+}
+
 
 
 .banner-fit-center{
@@ -240,6 +281,7 @@ p {
     padding: 0px 0px 1em;
     margin:0;
 }
+//a tag
 a {
     color: #326A88;
     outline: 0;

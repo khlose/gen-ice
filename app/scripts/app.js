@@ -22,6 +22,7 @@ angular
   .module('genIceApp', [
   'ui.bootstrap',
     'firebase',
+  'ng-mfb',
     'ngAnimate',
     'ngCookies',
     'ngResource',

@@ -36,6 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.css" />
     <link rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.css" />
+    <link rel="stylesheet" href="bower_components/ng-material-floating-button/mfb/dist/mfb.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -173,6 +174,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       
+      <nav mfb-menu position="br" effect="zoomin" label="ติดต่อเรา"
+     active-icon="fas fa-comments" resting-icon="fas fa-comments"
+     toggling-method="click">
+        <button mfb-button icon="fab fa-facebook" label="Facebook" onclick="window.open('https://www.facebook.com/GenIceThailand/');"></button>
+        <button mfb-button icon="fab fa-line" label="Line" onclick="window.open('https://line.me/R/ti/p/%40ndz5205f');"></button>
+        <button class="call-button" mfb-button icon="fas fa-phone-square" label="โทร" onclick="location.href='tel:+66982675292'"></button>
+      </nav>
+      
 <div class="swiper-container slider-area" ng-show="isActive('/')" ng-controller="swiperCtrl">
     <div class="swiper-wrapper slider">
                   <div class="swiper-slide">
@@ -207,6 +216,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="body">
     <div ng-view="" autoscroll="true"></div>
+      
+      
     </div>
 
     <div class="footer">
@@ -305,6 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <script src="bower_components/sweetalert2/dist/sweetalert2.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ng-material-floating-button/src/mfb-directive.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
