@@ -201,14 +201,14 @@ ul.no-bullet-list{
 }
 
 .media i {
-	color:#326A88;
+	color:#194D78;
 	font-size:50px;
 }
 
 .media h4 {
 	font-size:20px;
 	font-weight:600;
-	color:#326A88;
+	color:#194D78;
 }
 
 
@@ -283,7 +283,7 @@ p {
 }
 //a tag
 a {
-    color: #326A88;
+    color: #194D78;
     outline: 0;
     font-weight: bold;
     -webkit-transition: all .8s ease;
@@ -409,8 +409,8 @@ input[type="search"]::-webkit-search-decoration {
     border-color: #999999
 } 
 .btn-info{
-    color: #326A88;
-    border-color: #326A88;
+    color: #194D78;
+    border-color: #194D78;
 }
 .btn-success{
     color: #05AE0E;
@@ -437,8 +437,8 @@ input[type="search"]::-webkit-search-decoration {
     background-color: rgba(0,0,0,.0);
 }
 .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
-    color: #326A88;
-    border-color: #326A88;
+    color: #194D78;
+    border-color: #194D78;
     background-color: rgba(0,0,0,.0);
 }
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
@@ -475,7 +475,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 .btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info.active[disabled], fieldset[disabled] .btn-info.active {
     background-color: rgba(0, 0, 0, 0);
-    border-color: #326A88;
+    border-color: #194D78;
 }
 .btn-success.disabled, .btn-success[disabled], fieldset[disabled] .btn-success, .btn-success.disabled:hover, .btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover, .btn-success.disabled:focus, .btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus, .btn-success.disabled:active, .btn-success[disabled]:active, fieldset[disabled] .btn-success:active, .btn-success.disabled.active, .btn-success.active[disabled], fieldset[disabled] .btn-success.active {
     background-color: rgba(0, 0, 0, 0);
@@ -496,14 +496,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 .btn-primary {
     color: #FFF;
-    background-color: #326A88;
-    border-color: #326A88;
+    background-color: #194D78;
+    border-color: #194D78;
     border-radius: 1px;
     padding: 10px 20px;
     font-weight: 600;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,.btn-primary:active:focus, .open > .dropdown-toggle.btn-primary {
-    color: #326A88;
+    color: #194D78;
     background-color: #313538;
     border-color: #282829;
     font-weight: 600;
@@ -511,15 +511,15 @@ input[type="search"]::-webkit-search-decoration {
 .btn-default {
     border-radius: 1px;
     padding: 10px 20px;
-    border: 1px solid #326A88;
+    border: 1px solid #194D78;
     color: #000;
-    background-color: #326A88;
+    background-color: #194D78;
     border-color: #F0F0F0;
     font-weight: 600;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
     color: #000;
-    background-color: #326A88;
+    background-color: #194D78;
     border-color: #F0F0F0;
     font-weight: 600;
 }
@@ -561,7 +561,7 @@ input[type="search"]::-webkit-search-decoration {
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
 .form-inline input[type=submit]{
-    background: #326A88;
+    background: #194D78;
     color: #fff;
     height: 40px;
     width: 90px;
@@ -652,7 +652,7 @@ input[type="search"]::-webkit-search-decoration {
     border-left: 0 none;
 }
 .search-btn ,.toggle-btn{
-    background-color: #326A88;
+    background-color: #194D78;
     color: #333;
     font-size: 16px;
     border: 1px solid #EAE9E9;
@@ -923,7 +923,7 @@ label small{
 @media (min-width: 767px)
 {
   .navbar-default .navbar-nav > li > a.active:after{
-    background-color: #326A88;
+    background-color: #194D78;
     bottom: -24px;
     content: "";
     height: 5px;
@@ -989,7 +989,7 @@ ul.list-inline{
 
 
 .navbar-default .navbar-nav > li > a::after {
-    background-color: #326A88;
+    background-color: #194D78;
     bottom: -24px;
     content: "";
     height: 5px;
@@ -1032,11 +1032,11 @@ ul.list-inline{
     transition: all 0.4s ease;
 }
 .nav-button.login{
-    background-color: #326A88;
+    background-color: #194D78;
     margin-right: 5px;
 }
 .nav-button:hover{
-    background-color: #326A88;
+    background-color: #194D78;
 
 }
 .navbar{
@@ -1068,7 +1068,7 @@ ul.list-inline{
     border-width: 4px;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-    border-color: transparent transparent #326A88;
+    border-color: transparent transparent #194D78;
     border-style: solid;
     border-width: 4px;
     color: #666666;
@@ -1170,7 +1170,7 @@ ul.list-inline{
     font-weight: 300;
 }
 .navbar .yamm-content ul li a:hover {
-    color: #326A88;
+    color: #194D78;
     text-decoration: none;
 }
 .navbar .yamm-content .banner {
@@ -1310,7 +1310,7 @@ ul.list-inline{
 
 .hi-icon-effect i.feature-fa:hover {
 	background:#fff;
-	color: #346B8B;
+	color: #194D78;
 	-webkit-transition: color 300ms, background-color 300ms;
   -moz-transition: color 300ms, background-color 300ms;
   -o-transition:  color 300ms, background-color 300ms;
@@ -1320,7 +1320,7 @@ ul.list-inline{
 
 .hi-icon-effect img.feature-fa:hover {
 	background:#fff;
-	color: #346B8B;
+	color: #194D78;
 	-webkit-transition: color 300ms, background-color 300ms;
   -moz-transition: color 300ms, background-color 300ms;
   -o-transition:  color 300ms, background-color 300ms;
@@ -1333,7 +1333,7 @@ ul.list-inline{
 	margin-bottom:30px;
 	color:#fff;
 	padding:50px;
-	background:#346B8B;
+	background:#194D78;
 	border-radius:50%;
 }
 
@@ -1343,7 +1343,7 @@ ul.list-inline{
 	margin-bottom:30px;
 	color:#fff;
 	padding:50px;
-	background:#346B8B; //
+	background:#194D78; //
 	border-radius:50%;
 }
 
@@ -1441,7 +1441,7 @@ font-weight: 500;
 
 }
 .header-social ul li:hover{
-    color: #326A88
+    color: #194D78
 }
 
 
@@ -1501,17 +1501,17 @@ page-header
     color:#777;
 }
 .layout-switcher a:hover{     
-    color:#326A88;
+    color:#194D78;
 }
 .layout-switcher .active{
-    color:#326A88;
+    color:#194D78;
 }
 .layout-switcher {
     padding: 0px 10px;
     text-align: right;
 }
 .search-widget fieldset .largesearch-btn{
-    background-color: #326A88;
+    background-color: #194D78;
     font-size: 16px;
     border: 1px solid #EAE9E9;
     width: 100%;
@@ -1566,7 +1566,7 @@ Asside widgets CSS
 .panel.sidebar-menu .panel-heading h4,
 .panel.sidebar-menu .panel-heading h5 {
     display: inline-block;
-    border-bottom: solid 3px #326A88;
+    border-bottom: solid 3px #194D78;
     line-height: 1.1;
     margin-bottom: 0;
     padding-bottom: 10px;
@@ -1662,7 +1662,7 @@ Asside widgets CSS
     padding: 5px;
     border: solid 1px #eeeeee;
     border-radius: 0;
-    color: #326A88;
+    color: #194D78;
     margin: 5px 5px 5px 0;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -1670,9 +1670,9 @@ Asside widgets CSS
     font-size: 13px;
 }
 .panel.sidebar-menu ul.tag-cloud li a:hover {
-    color: #326A88;
+    color: #194D78;
     text-decoration: none;
-    border-color: #326A88;
+    border-color: #194D78;
 }
 .panel.sidebar-menu ul.popular,
 .panel.sidebar-menu ul.recent {
@@ -1911,7 +1911,7 @@ Asside widgets CSS
     border-radius: 50%;
 }
 .testimonial .owl-theme .owl-controls .owl-page span{
-    background: #326A88;
+    background: #194D78;
 }
 .client-text {
     border-radius: 2px;
@@ -2079,7 +2079,7 @@ proerty-th
 }
 .properties-page .proerty-th .proerty-price{
     font-weight: 600;
-    color: #326A88;
+    color: #194D78;
 }
 .proerty-th .proerty-item  .item-entry h5{
     text-transform: uppercase;
@@ -2189,7 +2189,7 @@ proerty-th-list
 
 .proerty-th-list .proerty-price{
     font-weight: 600;
-    color: #326A88;
+    color: #194D78;
     font-size: 25px;
 }
 .property-icon {
@@ -2282,7 +2282,7 @@ recent-property-widget
     padding: 0px 6px;
 }
 .recent-property-widget ul li .property-seeker .b-2 {
-    background-color: #326A88;
+    background-color: #194D78;
     padding: 0px 6px;
 }
 
@@ -2345,8 +2345,8 @@ single property page
     padding: 10px 7px 4px 7px;
 }
 .favorite-and-print .add-to-fav:hover  ,.favorite-and-print  .printer-icon:hover  {
-    color:#326A88;
-    border-color: #326A88;
+    color:#194D78;
+    border-color: #194D78;
 }
 .favorite-and-print .add-to-fav i ,.favorite-and-print  .printer-icon i  { 
     font-size: 25px;
@@ -2371,7 +2371,7 @@ single property page
     letter-spacing: 3px;
 }
 .single-property-header .property-price{
-    color: #326A88;
+    color: #194D78;
     /*font-size: 30px;//for number*/
   font-size: 20px;
     letter-spacing: 1.5px;
@@ -2384,7 +2384,7 @@ single property page
 }
 .s-property-title {
     margin-bottom: 15px;
-    color: #326A88;
+    color: #194D78;
     font-size: 18px;
 }
 
@@ -2509,7 +2509,7 @@ single property page
 }
 .property-features ul li a::after{
     content: "/";
-    color: #326A88;
+    color: #194D78;
     font-weight: bold;
     padding-left: 5px;
     font-size: 14px;
@@ -2570,7 +2570,7 @@ single property page
 }
 .dealer-action a::after{
     content: "/";
-    color: #326A88;
+    color: #194D78;
     font-weight: 700;
     font-size: 20px;
     margin: 4px;
@@ -2607,7 +2607,7 @@ Welcom
 .welcome-estate:hover .welcome-icon{
     color:#FFF;
     border: 2px solid transparent;
-    background-color: #326A88;
+    background-color: #194D78;
 }
 
 .welcome_text{
@@ -2709,8 +2709,8 @@ count-area
     padding: 2px 15px;
     text-transform: uppercase;
     margin: 0px;
-    border-left: 2px solid #326A88;
-    border-right: 2px solid #326A88;
+    border-left: 2px solid #194D78;
+    border-right: 2px solid #194D78;
     display: inline-block;
 }
 .boy-sale-area {
@@ -2801,7 +2801,7 @@ count-area
     padding-top:35%; 
 }
 .box-tree .item-tree-icon i:hover{
-    color: #326A88;  
+    color: #194D78;  
 }
 .box-for{
     padding: 10px 0px;
@@ -2850,12 +2850,12 @@ count-area
     letter-spacing: 0.5px;
 }
 .slider-selection { 
-    background: #326A88;
+    background: #194D78;
 }
 .search-form .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
     color: #FFF;
     text-decoration: none;
-    background-color: #326A88;
+    background-color: #194D78;
     outline: 0px none;
 }
 .search-form .dropdown-menu > li > a {
@@ -2981,7 +2981,7 @@ padding-bottom: 15px;
     text-transform: uppercase;
     margin-bottom: 15px;
     background: transparent none repeat scroll 0% 0%;
-    border-bottom: 2px solid #326A88;
+    border-bottom: 2px solid #194D78;
     font-size: 20px;
     line-height: 30px;
 }
@@ -2996,7 +2996,7 @@ padding-bottom: 15px;
     font-size: 23px;
 }
 .login-social:hover, .login-social:focus{
-    background-color: #326A88;
+    background-color: #194D78;
 }
 
 
@@ -3058,7 +3058,7 @@ padding-bottom: 15px;
     width: 24px;
     height: 24px;
     content: "";
-    color: #326A88;
+    color: #194D78;
     font-size: 16px;
     line-height: 24px;
     text-align: center;
@@ -3202,7 +3202,7 @@ padding-top: 7px;
     letter-spacing: 2px;
 }
 .footer h4 span{
-    border-bottom: 3px solid #326A88;
+    border-bottom: 3px solid #194D78;
 }
 .footer-title-line {
     width: 100px;
@@ -3241,7 +3241,7 @@ text-transform: uppercase;
 font-size: 13px;
 }
 .footer ul li a:hover{
-    color: #326A88;
+    color: #194D78;
     text-decoration: none;
 }
 .footer-menu li{
@@ -3333,8 +3333,8 @@ ul.footer-blog li {
     font-size: 14px;
     margin-left: -17px;
     z-index: 99;
-    background-color: #346B8B;
-    border-color: #346B8B;
+    background-color: #194D78;
+    border-color: #194D78;
 }
 .footer .subscribe:hover{
     background-color: #2D2D2D;
@@ -3351,12 +3351,12 @@ ul.footer-blog li {
     padding-bottom: 0.3em;
 }
 .social  ul li a:hover {
-    color: #326A88;
+    color: #194D78;
 order-color: #868686;
 background-color: #868686;
 }
 .social  ul li a:hover i{
-   color: #326A88;  
+   color: #194D78;  
 }
 .social ul li a{
 display: block;
@@ -3463,7 +3463,7 @@ padding: 10px;
 
 .add2cart:hover{
   color: white;
-  background: #326A88;
+  background: #194D78;
   border-color: rgba(0,0,0,0);
 }
 .add2cart.success{
