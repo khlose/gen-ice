@@ -11,27 +11,40 @@ angular.module('genIceApp')
   .controller('CalculatorCtrl', function () {
   
   
-  }).controller('RecommendationCtrl', function ($firebaseObject,$scope,$uibModal) {
+  }).controller('RecommendationCtrl', function ($firebaseObject,$scope,$uibModal,$uibModalStack) {
   $scope.ice_amount = 120;
   $scope.ice_price = 2.5;
   $scope.elec_cost = 4.20;
   $scope.water_cost = 15.80;
   
+  $scope.selectedModel = {
+        "daily_elec_unit" : 5.83,
+        "daily_water_unit" : 0.04,
+        "price" : 34112,
+        "production" : 39,
+        "production_range" : "30-39"
+      }
   
-  $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
-  $scope.per_month_ice_cost = $scope.per_day_ice_cost*30;
-      
+  $scope.daily_ice_cost = $scope.ice_amount * $scope.ice_price;
+  $scope.monthly_ice_cost = $scope.daily_ice_cost*30;
+
   
-   $scope.update_monthly_ice = function(){
-      /*$scope.per_month_ice_cost = $scope.ice_amount * $scope.ice_price * 30;*/
-      $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
-      $scope.per_month_ice_cost = $scope.per_day_ice_cost*30;
-      
+   $scope.updateCalculation = function(){
+     $scope.daily_ice_cost = ($scope.ice_amount * $scope.ice_price).toFixed(2);
+     $scope.monthly_ice_cost = ($scope.daily_ice_cost*30).toFixed(2);
+     $scope.monthly_utility_cost = ((($scope.elec_cost * $scope.selectedModel.daily_elec_unit) + ($scope.water_cost * $scope.selectedModel.daily_water_unit))*30).toFixed(2);
+     $scope.annual_utility_cost = ($scope.monthly_utility_cost * 12).toFixed(2);
+     $scope.daily_ice_machine = ((($scope.elec_cost * $scope.selectedModel.daily_elec_unit) + ($scope.water_cost * $scope.selectedModel.daily_water_unit)) / $scope.selectedModel.production).toFixed(2);
+     $scope.per_year_save = ($scope.daily_ice_cost -  $scope.daily_ice_machine)*365;
+     $scope.break_even = ($scope.selectedModel.price * 12 / $scope.per_year_save).toFixed(2);
     }
    
    
    $scope.products = []; 
-   
+  
+
+   $scope.showHiddenSelectedModel = false;
+
    $scope.showRecommendation = function(){
      var modalInstance = $uibModal.open({
        animation: $scope.animationEnabled,
@@ -45,17 +58,21 @@ angular.module('genIceApp')
        
      });
      
-     
-     
-     
-     
-   }
-   
-   
+     modalInstance.result.then(function (selectedItem) {
+       $scope.selectedModel = selectedItem;
+       $scope.showHiddenSelectedModel = true;
+       $scope.updateCalculation();
+       $uibModalStack.dismissAll();
+     },function(){
+       $uibModalStack.dismissAll();
+     });
+   };
+  
+  
    $scope.calculate = function(){
-      
+     $scope.products = [];
      const rootRef = firebase.database().ref().child('products');
-     const ref = rootRef.child('icemaker').orderByChild('production').startAt($scope.ice_amount);
+     const ref = rootRef.child('icemaker').orderByChild('production').startAt($scope.ice_amount).endAt($scope.ice_amount*1.2);
      
      var rawProd = $firebaseObject(ref);
      
@@ -65,124 +82,44 @@ angular.module('genIceApp')
          $scope.products.push({key:value,value:key});
        });
        
-       
-       
-
-       
+       if($scope.products.length != 0){
+         $scope.showRecommendation();
+       }
+       else{
+         swal({ 
+        title: "ขออภัยค่ะ",
+        text: "ไม่พบสินค้าที่ตรงกับความต้องการ ปริมาณน้ำแข็งที่ซื้อต่อวันอาจน้อยไปหรือมากไปค่ะ",
+        type: "error",
+        confirmButtonText: "ปิด",
+           
+         })
+       }
      });
+     
+    
+     
+     
+ 
  
    }
   
   
+   
+   
+   
     
   //$modalInstance
-  }).controller('ModalInstanceCtrl', function ($scope, models,$uibModalInstance){
+  }).controller('ModalInstanceCtrl', function ($scope, models,$uibModalInstance,$uibModalStack){
     $scope.recommendedModels = models;
-  
-    $scope.ok = function () {
-    $uibModalInstance.close();
+    $scope.selectedModel = null;
+    $scope.ok = function (selected) {
+      $scope.selectedModel = selected;
+      
+      $uibModalInstance.close($scope.selectedModel);
+    }
+    $scope.close = function(){
+      $uibModalStack.dismissAll();
     }
   
   
-  }).controller('BreakevenCtrl', function ($firebaseObject,$scope) {
-  
-  
-  $scope.ice_amount = 200;
-  $scope.ice_price = 2.5;
-  $scope.elec_cost = 4.20;
-  $scope.water_cost = 15.80;
-  $scope.discount = 0;
-  $scope.product_price = 0;
-  
-      $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
-  $scope.per_month_ice_cost = $scope.per_day_ice_cost *30;
-  
-  
-    const rootRef = firebase.database().ref().child('products');
-    const ref = rootRef.child('icemaker');
-    
-    var rawProd = $firebaseObject(ref);
-    
- 
-    $scope.products = [];
-    rawProd.$loaded().then(function(){
-      angular.forEach(rawProd,function(key,value){
-        $scope.products.push({key:value,value:key});
-      
-      });
-      $scope.selected = $scope.products[0];
-      
-      
-      $scope.daily_elec_unit = $scope.selected.value.daily_elec_unit;
-      $scope.daily_water_unit = $scope.selected.value.daily_water_unit;
-      
-      $scope.daily_elec_cost = ($scope.daily_elec_unit * $scope.elec_cost).toFixed(2);
-      $scope.daily_water_cost = ($scope.daily_water_unit * $scope.water_cost).toFixed(2);
-      
-      $scope.production_rate = $scope.selected.value.production;
-      $scope.icetype = $scope.selected.value.icetype;
-      $scope.capacity = $scope.selected.value.capacity;
-      $scope.dimension = $scope.selected.value.dimension;
-      
-      $scope.daily_utility = (parseFloat($scope.daily_elec_cost) + parseFloat($scope.daily_water_cost)).toFixed(2);
-      $scope.monthly_utility = ($scope.daily_utility * 30).toFixed(2);
-      
-      $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
-      
-      $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);   
-    });
-
-
-    
-  
-  
-  $scope.calculate = function(){
-      
-    }
-    
-  
-  
-  
-    $scope.update_monthly_ice = function(){
-      /*$scope.per_month_ice_cost = $scope.ice_amount * $scope.ice_price * 30;*/
-      $scope.per_day_ice_cost = $scope.ice_amount * $scope.ice_price;
-      $scope.per_month_ice_cost = $scope.per_day_ice_cost*30;
-      
-            $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
-      
-            $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
-      
-      
-      
-    }
-    
-    
-    
-    
-    $scope.update_electricity_water_cost = function(){
-      
-      $scope.daily_elec_unit = $scope.selected.value.daily_elec_unit;
-      $scope.daily_water_unit = $scope.selected.value.daily_water_unit;
-      
-      $scope.daily_elec_cost = ($scope.daily_elec_unit * $scope.elec_cost).toFixed(2);
-      $scope.daily_water_cost = ($scope.daily_water_unit * $scope.water_cost).toFixed(2);
-            $scope.production_rate = $scope.selected.value.production;
-      $scope.icetype = $scope.selected.value.icetype;
-      $scope.capacity = $scope.selected.value.capacity;
-      $scope.dimension = $scope.selected.value.dimension;
-      
-      $scope.daily_utility = (parseFloat($scope.daily_elec_cost) + parseFloat($scope.daily_water_cost)).toFixed(2);
-      $scope.monthly_utility = ($scope.daily_utility * 30).toFixed(2);
-      
-      
-      $scope.monthly_save = (parseFloat($scope.per_month_ice_cost) - parseFloat($scope.monthly_utility)).toFixed(2);
-      
-      $scope.break_even = (parseFloat($scope.product_price * (100-$scope.discount)/100)/parseFloat($scope.monthly_save)).toFixed(2);
-      
-      
-      
-      
-    }
-  
-  
-});
+  });
