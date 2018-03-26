@@ -53,55 +53,18 @@ angular.module('genIceApp')
       
       
       swal({ 
-        title: "สินค้าหมด",
-        text: "กรุณาสั่งซื้อผ่านทางอีเมล์ ระบบจะทำการเปิดแอพอีเมล์อัตโนมัติ",
-        type: "error",
-        confirmButtonText: "ไปที่หน้าอีเมล์",
-        showCancelButton: true
         
-      }).then(function(result) {
-        if(result.value)
-          window.location.href = "mailto:genice@hokgroup.co.th?subject=Purchase order for " + $scope.currentProduct.model + "&body=I'm interested in buying " + $scope.currentProduct.model+" Please contact me back through this email.";
-      });;
+        type: "info",
+        showCloseButton: true,
+        showConfirmButton:false,
+        html:
+        '<h2 style="margin-top:0px">คลิกด้านล่างเพื่อติดต่อสินค้า</h2>' +
+    '<a href="https://www.facebook.com/GenIceThailand/"><i class="fab fa-facebook fa-lg" style="color:#3B5998; font-size:50px;"></i></a> ' +
+    '<a href="https://line.me/R/ti/p/%40ndz5205f"><img src="images/LINE@_APP_typeA.png" style="width:50px;height:auto; margin-top:-20px;"></li></a> ' +
+        '<br><h3">หรือโทร 098-267-5292</h3>'
+      });
       
-/*      swal({
-        title: 'Submit email to run ajax request',
-        html: "<form action=\"https://formspree.io/your@email.com\" method=\"POST\"><input type=\"text\" name=\"name\"><input type=\"email\" name=\"_replyto\"><input type=\"submit\" value=\"Send\"></form>"
-        
-        input: 'email',
-        showCancelButton: true,
-        confirmButtonText: 'Submit',
-      });*/
-      
-      
-/*      swal({
-        title: 'Submit email to run ajax request',
-        input: 'email',
-        showCancelButton: true,
-        confirmButtonText: 'Submit',
-        showLoaderOnConfirm: true,
-        preConfirm: (email) => {
-          return new Promise((resolve) => {
-            setTimeout(() => {
-              if (email === 'taken@example.com') {
-                swal.showValidationError(
-                  'This email is already taken.'
-                )
-              }
-              resolve()
-            }, 2000)
-          })
-        },
-        allowOutsideClick: () => !swal.isLoading()
-      }).then((result) => {
-        if (result.value) {
-          swal({
-            type: 'success',
-            title: 'Ajax request finished!',
-            html: 'Submitted email: ' + result.value
-          })
-        }
-      })*/
+
       
       
       

@@ -59,14 +59,29 @@ input[type="number"] {
 .mfb-component__wrap i:hover{
   color: white;
 }
+
 @media (min-width: 767px)
 {
   .call-button{
     visibility: hidden;
   }
+  .call-button-alternative{
+    visibility: visible;
+  }
   
 
 }
+
+
+@media (min-width: 0px) and (max-width: 766px)
+{
+  
+  .call-button-alternative{
+    visibility: hidden;
+  }
+}
+
+
 
 
 @media (min-width: 767px)
