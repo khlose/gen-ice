@@ -60,7 +60,7 @@ input[type="number"] {
   color: white;
 }
 
-@media (min-width: 767px)
+@media (min-width: 769px)
 {
   .call-button{
     visibility: hidden;
@@ -73,7 +73,7 @@ input[type="number"] {
 }
 
 
-@media (min-width: 0px) and (max-width: 766px)
+@media (min-width: 0px) and (max-width: 768x)
 {
   
   .call-button-alternative{
@@ -84,7 +84,7 @@ input[type="number"] {
 
 
 
-@media (min-width: 767px)
+@media (min-width: 769px)
 {
   .calculatedModelImg{
     width: auto;
@@ -105,7 +105,7 @@ input[type="number"] {
 
 
 
-@media (min-width: 0px) and (max-width: 766px)
+@media (min-width: 0px) and (max-width: 768px)
 {
     .calculatedModelImg{
   width: auto;
@@ -219,7 +219,7 @@ ul.no-bullet-list{
 
 
 
-@media (min-width: 767px)
+@media (min-width: 769px)
 {
 .media-left{
   width: 2000px;
@@ -232,7 +232,7 @@ ul.no-bullet-list{
 
 
 
-@media (min-width: 0px) and (max-width: 766px)
+@media (min-width: 0px) and (max-width: 768px)
 {
   
   .media ul{
@@ -977,7 +977,7 @@ label small{
 }
 
 
-@media (min-width: 767px)
+@media (min-width: 769px)
 {
   .navbar-default .navbar-nav > li > a.active:after{
     background-color: #194D78;
@@ -999,7 +999,7 @@ label small{
 
 
 
-@media (min-width: 0px) and (max-width: 766px)
+@media (min-width: 0px) and (max-width: 768px)
 {
   .navbar-default .navbar-nav > li > a.active:after{
     background-color: rgba(255,255,255,0);
@@ -1030,7 +1030,7 @@ ul.list-inline{
   font-size: 18px;
 }
 
-@media (min-width: 0px) and (max-width: 766px)
+@media (min-width: 0px) and (max-width: 768px)
 {
   .phone-mail{
     font-size: 12px;
@@ -1062,7 +1062,7 @@ ul.list-inline{
 .navbar-nav.navbar-right:last-child{
     margin-right: 20px
 }
-@media (min-width: 0px) and (max-width: 766px)
+@media (min-width: 0px) and (max-width: 768px)
 {
   .navbar-brand {
   padding: 0px 15px 0px 15px;
@@ -1154,7 +1154,7 @@ ul.list-inline{
 .yamm .yamm-content {
     padding: 20px 30px;
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     .yamm .yamm-content {
         padding: 10px 20px;
     }
@@ -1205,7 +1205,7 @@ ul.list-inline{
     padding-bottom: 10px;
     border-bottom: dotted 1px #555555;
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
     .navbar .yamm-content h5 {
         font-size: 14px;
     }
@@ -1339,7 +1339,7 @@ ul.list-inline{
     margin-left: 0;
 }
 
-@media (min-width: 767px)
+@media (min-width: 769px)
 {
 
 .slider-area{
@@ -1350,7 +1350,7 @@ ul.list-inline{
 }
 
 
-@media (max-width: 766px)
+@media (max-width: 768px)
 {
 
 .slider-area{
@@ -1452,14 +1452,14 @@ font-weight: 500;
 
 
 
-@media (min-width: 767px){
+@media (min-width: 769px){
  h1.head-brand{
      font-size: 20px;
   padding-top: 5px;
   }
 }
 
-@media (min-width: 0px) and (max-width: 766px){
+@media (min-width: 0px) and (max-width: 768px){
  h1.head-brand{
    font-size: 16px;
    padding-top: 5px;
@@ -1503,7 +1503,7 @@ font-weight: 500;
 
 
 
-@media (min-width: 767px){
+@media (min-width: 769px){
 
   .header-social ul li i{
   padding-top: 10px;
@@ -1517,7 +1517,7 @@ font-weight: 500;
   }
 }
 
-@media (min-width: 0px) and (max-width: 766px){
+@media (min-width: 0px) and (max-width: 768px){
   .header-social ul li i{
         font-size: 30px;
   }
@@ -2118,18 +2118,18 @@ proerty-th
 }
 
 
-@media (min-width: 0px) and (max-width: 766px){
+@media (min-width: 0px) and (max-width: 768px){
   .proerty-th .proerty-item  .item-thumb img{
     transition: all 0.2s linear 0s;
     display: block;
     position: relative;
     opacity: 1;
     width: 100%;
-    max-width: 766px;
+    max-width: 768px;
     height: auto;
   } 
 }
-@media (min-width: 767px) {
+@media (min-width: 769px) {
   .proerty-th .proerty-item  .item-thumb img{
     transition: all 0.2s linear 0s;
     display: block;

@@ -58,7 +58,7 @@ angular.module('genIceApp')
         showCloseButton: true,
         showConfirmButton:false,
         html:
-        '<h2 style="margin-top:0px">คลิกด้านล่างเพื่อติดต่อสินค้า</h2>' +
+        '<h2 style="margin-top:0px">คลิกด้านล่างเพื่อติดต่อซื้อสินค้า</h2>' +
     '<a href="https://www.facebook.com/GenIceThailand/"><i class="fab fa-facebook fa-lg" style="color:#3B5998; font-size:50px;"></i></a> ' +
     '<a href="https://line.me/R/ti/p/%40ndz5205f"><img src="images/LINE@_APP_typeA.png" style="width:50px;height:auto; margin-top:-20px;"></li></a> ' +
         '<br><h3">หรือโทร 098-267-5292</h3>'
