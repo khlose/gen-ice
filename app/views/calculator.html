@@ -40,14 +40,14 @@
                                         <div class="form-group">
                                             <label for="email">ค่าน้ำแข็งต่อวัน </label>
                                             <!--<input type="text" class="form-control" id="email">-->
-                                            <h4> {{ daily_ice_cost }} บาท </h4>
+                                            <h4> {{ daily_ice_cost | number : fractionSize}} บาท </h4>
                                         </div>
                                     </div>
                                   <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="email">ค่าน้ำแข็งต่อเดือน</label>
                                             <!--<input type="text" class="form-control" id="email">-->
-                                            <h4> {{ monthly_ice_cost }} บาท </h4>
+                                            <h4> {{ monthly_ice_cost | number : fractionSize}} บาท </h4>
                                         </div>
                                     </div>
                                   
@@ -137,32 +137,28 @@
                                         </div>
                                     </div>
                                   
-                                  
-                                  
-                                  
-                                  
                                    <div class="col-sm-3 col-xs-6 selected-model-detail">
                                         <div class="form-group">
                                             <label for="firstname">ค่าไฟ+น้้ำต่อเดือน </label>
-                                            <h4 id="daily-water-unit"> {{ monthly_utility_cost}} บาท</h4>
+                                            <h4 id="daily-water-unit"> {{ monthly_utility_cost| number : fractionSize}} บาท</h4>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-6 selected-model-detail">
                                         <div class="form-group">
                                             <label for="lastname">ค่าไฟ+น้ำต่อปี</label>
-                                            <h4 id="daily-water-unit"> {{annual_utility_cost}} บาท</h4>
+                                            <h4 id="daily-water-unit"> {{annual_utility_cost| number : fractionSize}} บาท</h4>
                                         </div>
                                     </div>
                                    <div class="col-sm-3 col-xs-6 selected-model-detail">
                                         <div class="form-group">
                                             <label for="firstname">คิดเป็นน้ำแข็งราคา</label>
-                                            <h4 id="daily-water-unit"> {{daily_ice_machine }} บาท/กก. </h4>
+                                            <h4 id="daily-water-unit"> {{daily_ice_machine | number : fractionSize}} บาท/กก. </h4>
                                         </div>
                                     </div>
                                     <div class="col-sm-3 col-xs-6 selected-model-detail">
                                         <div class="form-group">
                                             <label for="lastname">เงินที่ประหยัดได้ต่อปี</label>
-                                            <h4 id="daily-water-unit"> {{per_year_save}} บาท </h4>
+                                            <h4 id="daily-water-unit"> {{per_year_save| number : fractionSize}} บาท </h4>
                                         </div>
                                     </div>
                                   
@@ -173,57 +169,6 @@
                                             <h4 id="daily-water-unit"><strong> {{break_even}} เดือน </strong></h4>
                                         </div>
                                     </div>
-                                  
-                                  
-                                  
-                                  
-                                  
-                                  <!--
-                                  
-                                  <div class="col-md-3 col-sm-3 col-xs-6 selected-model-detail">
-                                        <div class="form-group">
-                                            <label for="firstname">ค่าไฟ (บาท/ยูนิต)</label>
-                                            <input type="number" step="any" class="form-control" ng-model="elec_cost" ng-change="update_electricity_water_cost()">
-                                        </div>
-                                    </div>
-                                  
-                                  <div class="col-md-3 col-sm-3 col-xs-6 selected-model-detail">
-                                        <div class="form-group">
-                                            <label for="lastname">ค่าน้ำ (บาท/ยูนิต)</label>
-                                            <input type="number" step="any" class="form-control"  ng-model="water_cost" ng-change="update_electricity_water_cost()">
-                                        </div>
-                                    </div>
-                                  
-                                  <div class="col-md-3 col-sm-3 col-xs-6 selected-model-detail">
-                                    <div class="form-group">
-                                      <label for="email">ค่าไฟและน้ำต่อเดือน </label>
-                                      
-                                      <h4> {{daily_elec_cost}} บาท </h4>
-                                    </div>
-                                  </div>
-                                  
-                                  
-                                  <div class="col-md-3 col-sm-3 col-xs-6 selected-model-detail">
-                                    <div class="form-group">
-                                      <label for="email">คิดเป็นน้ำแข็งราคา</label>
-
-                                      <h4 id="daily-water-cost"> {{daily_water_cost}} บาท/กก. </h4>
-                                    </div>
-                                  </div>
-                                  
-                                  -->
-                                  
-                                  
-                                  
-                                  
-                                  
-                                  
-                                  
-                                  
-                                  
-                              
-                                  
-                                  
 
                                     
                                   

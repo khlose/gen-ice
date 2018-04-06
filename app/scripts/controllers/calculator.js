@@ -35,7 +35,7 @@ angular.module('genIceApp')
      $scope.monthly_utility_cost = ((($scope.elec_cost * $scope.selectedModel.daily_elec_unit) + ($scope.water_cost * $scope.selectedModel.daily_water_unit))*30).toFixed(2);
      $scope.annual_utility_cost = ($scope.monthly_utility_cost * 12).toFixed(2);
      $scope.daily_ice_machine = ((($scope.elec_cost * $scope.selectedModel.daily_elec_unit) + ($scope.water_cost * $scope.selectedModel.daily_water_unit)) / $scope.selectedModel.production).toFixed(2);
-     $scope.per_year_save = ($scope.daily_ice_cost -  $scope.daily_ice_machine)*365;
+     $scope.per_year_save = (($scope.daily_ice_cost -  $scope.daily_ice_machine)*365).toFixed(2);
      $scope.break_even = ($scope.selectedModel.price * 12 / $scope.per_year_save).toFixed(2);
     }
    
