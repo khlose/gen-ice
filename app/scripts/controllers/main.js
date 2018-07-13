@@ -15,7 +15,6 @@ angular.module('genIceApp')
       'Karma'
     ];
   $scope.dataLoaded = false;
-   $scope.users = ['Fabio', 'Leonardo', 'Thomas', 'Gabriele', 'Fabrizio', 'John', 'Luis', 'Kate', 'Max'];
     const rootRef = firebase.database().ref().child('products');
     const ref = rootRef.child('icemaker');
     const showcase = ref.orderByChild('showcase').equalTo(true);
