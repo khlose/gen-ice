@@ -174,7 +174,7 @@
                               
                                 <div class="panel-body recent-property-widget">
                                     <ul>
-                                        <li  ng-repeat="(key, value) in relatedProduct">
+                                        <li  ng-repeat="(key, value) in relatedProduct track by $index">
                                             <div class="col-md-3 col-sm-3 col-xs-3 blg-thumb p0">
                                                 <a ng-href="#!/product/{{value.model}}"><img src="{{value.imageurl}}"></a>
 <!--                                                <span class="property-seeker">

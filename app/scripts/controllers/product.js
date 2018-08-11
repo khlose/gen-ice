@@ -18,6 +18,7 @@ angular.module('genIceApp')
     var wholeFamily = $scope.currentProduct.family;
     
     $scope.relatedProduct = [];
+    console.log("dskaiuhdsyuhjashjah");
     
     if(wholeFamily != null && wholeFamily.length > 0){
       var filteredFamily = wholeFamily.filter(function(e){return e !== $scope.currentProduct.model});
@@ -25,6 +26,7 @@ angular.module('genIceApp')
         
         var modelInFamily = $firebaseObject(ref.orderByChild('model').equalTo(entry).limitToFirst(1));
         modelInFamily.$loaded().then(function(){
+          console.log(modelInFamily[entry])
           $scope.relatedProduct.push(modelInFamily[entry]);
         });
       });
