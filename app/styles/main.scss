@@ -2959,6 +2959,44 @@ count-area
     padding: 5px 0px 0px 0px;
 }
 
+
+
+
+h1.main-title{
+	//background-color: rgba($color, .05);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	margin: 1rem 0;
+	padding:0;
+	text-align: center;
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span{
+		display: block;
+		padding: 1rem;
+		color: $main-color;
+		text-transform: uppercase;		
+	}
+	&:before, &:after{
+		content: '';
+		flex: 1;
+		display: block;
+		width: 100%;
+		border: 1px solid $main-color;
+	}
+	&.left{
+		span{
+			order: -1;
+			padding-left:0;
+		}
+	}
+}
+  
+  
+  
+
 /*
 blog
 */ 

@@ -22,63 +22,174 @@
 
         </div>
 
+
+
         <!--     Search bar   -->
+
+
+
+        <!--
+        <div class="col-sm-8 col-sm-offset-2 input-group stylish-input-group text-center">
+          <input type="text" class="form-control" placeholder="Search">
+          <span class="input-group-addon">
+              <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+          </button>
+          </span>
+        </div>
+-->
+
+
+
+        <!--     Filter box   -->
+        <!--
         <div class="col-sm-12">
-          <div class="col-sm-9 input-group stylish-input-group">
-            <input type="text" class="form-control" placeholder="Search">
-            <span class="input-group-addon">
-                        <button type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-            </button>
-            </span>
-          </div>
-          <div class="col-sm-2 col filter-button">
-            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#filter-panel">Filter
-<!--            <span class="glyphicon glyphicon-cog"></span>Filter-->
-            </button>
-          <div class="col-md-2 apply-filter-button">
-            
-          </div>
-          
-        </div>
-        </div>
-
-        <!--Items-->
-        <div class="col-md-12 clear">
-          <div id="list-type" class="proerty-th">
+          <button class="btn btn-default col-sm-offset-5 col-sm-2" style="color:white;margin-top:1.5vh;border-radius: 5px" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span> กรองสินค้า <span class="caret"></span></button>
 
 
-            <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in store.products">
-              <div class="box-two proerty-item">
-                <div class="item-thumb">
-                  <a ng-href="#!/product/{{value.model}}"><img src="{{value.imageurl}}"></a>
+
+          <div class="dropdown-menu dropdown-menu-right col-sm-12" role="menu" style="position:relative">
+
+            <form class="form-horizontal" role="form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="keywords">ชนิดน้ำแข็ง</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="keywords" id="keywords" placeholder="keyword, ...">
+                  </div>
                 </div>
-
-                <div class="item-entry overflow">
-                  <h5><a href="#"> {{value.model}} </a></h5>
-                  <div class="dot-hr"></div>
-                  <!--<span class="proerty-price pull-right">฿{{value.price}}</span>-->
-                  <img src="{{value.iceiconurl}}">น้ำแข็ง{{value.icetype}}
-
-                  <p style="display: none;">คำอธิบาย</p>
-
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="dialogAct">Dialog Act</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" name="dialogAct" id="dialogAct" placeholder="e.g. INFO">
+                  </div>
                 </div>
-
 
               </div>
+              <div class="col-md-6">
+                <div class="form-group ">
+                  <label class="col-sm-4 control-label" for="fromDate">From</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="fromDate" placeholder="e.g. 01/10/2015">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="toDate">To</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="toDate" placeholder="e.g. 02/10/2015">
+                  </div>
+                </div>
+                <div class="col-sm-offset-4 col-sm-8">
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-default col-sm-6 col-sm-offset-3" style="color:white;border-radius: 5px">Search :: <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </form>
+          </div>
+        </div>
+-->
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!--Items-->
+    <div class="col-md-12 clear">
+
+      <h1 class="main-title left">
+			<span>น้ำแข็งเหลี่ยม</span>
+		</h1>
+
+      <div id="list-type" class="proerty-th">
+
+
+        <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in store.products" ng-if="value.ice == 'cube'">
+          <div class="box-two proerty-item">
+            <div class="item-thumb">
+              <a ng-href="#!/product/{{value.model}}"><img src="{{value.imageurl}}"></a>
+            </div>
+
+            <div class="item-entry overflow">
+              <h5><a href="#"> {{value.model}} </a></h5>
+              <div class="dot-hr"></div>
+              <!--<span class="proerty-price pull-right">฿{{value.price}}</span>-->
+<!--              <img src="{{value.iceiconurl}}">น้ำแข็ง{{value.icetype}}-->
+
+              <p style="margin-bottom:0;margin-top:0;padding-bottom:0.5vh;padding-top:0.5vh">กำลังผลิต: {{value.production_range}} กิโลกรัม/วัน</p>
+
             </div>
 
 
+          </div>
+        </div>
 
+
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="col-md-12 clear">
+
+      <h1 class="main-title left">
+			<span>น้ำแข็งเกล็ดกรอบ</span>
+		</h1>
+
+      <div id="list-type" class="proerty-th">
+
+
+        <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in store.products" ng-if="value.ice == 'flake'">
+          <div class="box-two proerty-item">
+            <div class="item-thumb">
+              <a ng-href="#!/product/{{value.model}}"><img src="{{value.imageurl}}"></a>
+            </div>
+
+            <div class="item-entry overflow">
+              <h5><a href="#"> {{value.model}} </a></h5>
+              
+              <div class="dot-hr"></div>
+              <!--<span class="proerty-price pull-right">฿{{value.price}}</span>-->
+<!--               <img src="{{value.iceiconurl}}">น้ำแข็ง{{value.icetype}}-->
+
+              <p style="margin-bottom:0;margin-top:0;padding-bottom:0.5vh;padding-top:0.5vh">กำลังผลิต: {{value.production_range}} กิโลกรัม/วัน</p>
+
+            </div>
 
 
           </div>
         </div>
 
-        <div class="col-md-12">
-          <div class="pull-right">
-            <div class="pagination">
-              <!-- <ul>
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="col-md-12">
+      <div class="pull-right">
+        <div class="pagination">
+          <!-- <ul>
                                     <li><a href="#">Prev</a></li>
                                     <li><a href="#">1</a></li>
                                     <li><a href="#">2</a></li>
@@ -86,12 +197,12 @@
                                     <li><a href="#">4</a></li>
                                     <li><a href="#">Next</a></li>
                                 </ul>-->
-            </div>
-          </div>
         </div>
-
-
       </div>
     </div>
+
+
   </div>
+</div>
+</div>
 </div>
