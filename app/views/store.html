@@ -1,62 +1,84 @@
-    <div class="page-head"> 
-            <div class="container">
-                <div class="row">
-                    <div class="page-head-content">
-                        <h1 class="page-title">เครื่องทำน้ำแข็งทั้งหมดของ GENICE</h1>               
-                    </div>
-                </div>
-            </div>
+<div class="page-head">
+  <div class="container">
+    <div class="row">
+      <div class="page-head-content">
+        <h1 class="page-title">เครื่องทำน้ำแข็งทั้งหมดของ GENICE</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End page header -->
+
+<!-- property area -->
+<div class="properties-area recent-property" style="background-color: #FFF;">
+  <div class="container">
+    <div class="row">
+
+
+      <div class="col-md-12  pr0 padding-top-40 properties-page">
+        <div class="col-md-12 clear">
+
+
+
         </div>
-        <!-- End page header -->
 
-        <!-- property area -->
-        <div class="properties-area recent-property" style="background-color: #FFF;">
-            <div class="container">  
-                <div class="row">
-                     
-              
-                <div class="col-md-12  pr0 padding-top-40 properties-page">
-                    <div class="col-md-12 clear"> 
-                      
-
-                
-                    </div>
-
-                    <div class="col-md-12 clear"> 
-                        <div id="list-type" class="proerty-th">
-
-                          
-                          <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in store.products">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a ng-href="#!/product/{{value.model}}" ><img src="{{value.imageurl}}"></a>
-                                        </div>
-
-                                        <div class="item-entry overflow">
-                                            <h5><a href="#"> {{value.model}} </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <!--<span class="proerty-price pull-right">฿{{value.price}}</span>-->
-                                          <img src="{{value.iceiconurl}}">น้ำแข็ง{{value.icetype}}
-                                          
-                                          <p style="display: none;">คำอธิบาย</p>
+        <!--     Search bar   -->
+        <div class="col-sm-12">
+          <div class="col-sm-9 input-group stylish-input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+          </div>
+          <div class="col-sm-2 col filter-button">
+            <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#filter-panel">Filter
+<!--            <span class="glyphicon glyphicon-cog"></span>Filter-->
+            </button>
+          <div class="col-md-2 apply-filter-button">
             
-                                        </div>
+          </div>
+          
+        </div>
+        </div>
+
+        <!--Items-->
+        <div class="col-md-12 clear">
+          <div id="list-type" class="proerty-th">
 
 
-                                    </div>
-                                </div> 
-                          
-                          
-                                                  
+            <div class="col-sm-6 col-md-3 p0" ng-repeat="(key, value) in store.products">
+              <div class="box-two proerty-item">
+                <div class="item-thumb">
+                  <a ng-href="#!/product/{{value.model}}"><img src="{{value.imageurl}}"></a>
+                </div>
 
-                          
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-12"> 
-                        <div class="pull-right">
-                            <div class="pagination">
-                               <!-- <ul>
+                <div class="item-entry overflow">
+                  <h5><a href="#"> {{value.model}} </a></h5>
+                  <div class="dot-hr"></div>
+                  <!--<span class="proerty-price pull-right">฿{{value.price}}</span>-->
+                  <img src="{{value.iceiconurl}}">น้ำแข็ง{{value.icetype}}
+
+                  <p style="display: none;">คำอธิบาย</p>
+
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="pull-right">
+            <div class="pagination">
+              <!-- <ul>
                                     <li><a href="#">Prev</a></li>
                                     <li><a href="#">1</a></li>
                                     <li><a href="#">2</a></li>
@@ -64,12 +86,12 @@
                                     <li><a href="#">4</a></li>
                                     <li><a href="#">Next</a></li>
                                 </ul>-->
-                            </div>
-                        </div>                
-                    </div>
-                  
-                  
-                </div>  
-                </div>              
             </div>
+          </div>
         </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
